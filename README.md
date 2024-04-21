@@ -1,7 +1,5 @@
 ## My Neovim Config (Reaper)
 
-https://github.com/JuanBaut/nvim/assets/90160941/e5d12e9e-4ef4-4fbe-b392-e2148e1602e5
-
 - This neovim config never stops changing but I enjoy that.
 - I use it on osx and nixos, although it seems the main branch works in both.
 - I am trying grapple but I might go back to harpoon.
