@@ -1,0 +1,58 @@
+-- dagger's neovim keymaps
+vim.g.mapleader = " "
+
+-- better save and quit
+vim.keymap.set("n", "<leader>W", "<cmd>wall<CR>", { desc = "Write all buffers" })
+vim.keymap.set("n", "Q", "<cmd>q<CR>", { desc = "Quit window" })
+
+-- quickfix navigation
+vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next quickfix item" })
+vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Prev quickfix item" })
+
+-- better end and start of the line
+vim.keymap.set({ "n", "v" }, "L", "$", { desc = "End of the line" })
+vim.keymap.set({ "n", "v" }, "H", "^", { desc = "Start of the line" })
+
+-- move with J and K with indents
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "" })
+
+-- unbinds
+--vim.keymap.set({ "n", "v" }, "Q", "<nop>")
+vim.keymap.set({ "n", "v" }, "Y", "<nop>")
+vim.keymap.set({ "n", "v", "i" }, "<C-l>", "<nop>")
+
+-- keep cursor centered
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Move current line up" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next result in search /" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous result in search /" })
+
+-- next greatest remap ever : asbjornHaland
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]], { desc = "Paste from system clipboard" })
+
+-- replace current word
+vim.keymap.set(
+	"n",
+	"<leader>rp",
+	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+	{ desc = "Replace current word" }
+)
+
+-- window management
+vim.keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })
+vim.keymap.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" })
+vim.keymap.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
+vim.keymap.set("n", "<leader>wn", "<C-w>w", { desc = "Move to next window" })
+vim.keymap.set("n", "<leader>wx", "<cmd>close<CR>", { desc = "Close current split" })
+
+-- tab management
+vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+
+-- buffer navigation
+vim.keymap.set("n", "<leader>ur", "<C-o>", { desc = "Previous Buffer" })
+vim.keymap.set("n", "<leader>ux", "<cmd>bdelete<CR>", { desc = "Delete Buffer" })
