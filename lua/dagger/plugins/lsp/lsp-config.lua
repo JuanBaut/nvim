@@ -51,6 +51,7 @@ return {
 		end
 
 		local servers = {
+			nil_ls = {},
 			pyright = {},
 			html = {},
 			cssls = {},

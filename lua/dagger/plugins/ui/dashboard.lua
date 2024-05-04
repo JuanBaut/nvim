@@ -4,19 +4,19 @@ return {
 	opts = function()
 		local logo = {
 			[[                                                       ]],
-			[[           ,__.==;:::::;.                              ]],
-			[[            \;:;::::;';::.                .            ]],
-			[[             :::::;     ;:.              /#\           ]],
-			[[           ,:::::;       ;:             /###.          ]],
-			[[           ::::::;       ;:            /#####.         ]],
-			[[           ;:::::;       ;:           /#######.        ]],
-			[[         ,;;::::::,     ,:'          / \#######.       ]],
-			[[       ;;:::::::::;'...';:          /  / \######.      ]],
-			[[     .;:;:;:::::::::::::::::;,     /  /    \#####.     ]],
-			[[    .;:::::;:::::::::::::::::;,   /  /       \####.    ]],
-			[[   ;`;::::::`':::::::::::::::; ;|/  /          +###.   ]],
-			[[   ;`;:::::::`;::::::::::::; ;::|  /            \###.  ]],
-			[[   ;:`;:::::::`;:::::::::; ;::::| /              ###|  ]],
+			[[           ..·:::::::::;.                              ]],
+			[[            \:::::::;·;::.                .            ]],
+			[[            ;:::::;     ;:.              /#·           ]],
+			[[           ,:::::;       ;;             /###·          ]],
+			[[           ;:::::;       ;;            /#####·         ]],
+			[[           ;:::::;       ;;           /#######·        ]],
+			[[         ,;:::::::.     .:'          / \#######·       ]],
+			[[       ,;::::::::::'...':;          /  / \######·      ]],
+			[[     ,;:;:;:::::::::::::::::;,     /  /    \#####·     ]],
+			[[    ,;:::::;:::::::::::::::::;,   /  /       \####·    ]],
+			[[   ;`;::::::`':::::::::::::::; ;|/  /          *###·   ]],
+			[[   ;`;:::::::`;::::::::::::; ;::|  /            *###.  ]],
+			[[   ;:`;:::::::`;:::::::::; ;::::| /              *##|  ]],
 			[[   ;::`;:::::::`:::::::; ;::::::|/                ##|  ]],
 			[[   `;::`;:::::::`;::; ;:::::::::[                 #/   ]],
 			[[    ;:::`;::::::::`;:::::::::::::]                /    ]],
@@ -24,33 +24,26 @@ return {
 			[[     `;::::`;::::::::::;'/  /`;::|                     ]],
 			[[      ;:::::`;:::::::;' /  /   `'|                     ]],
 			[[                                                       ]],
+			[[                                                       ]],
 		}
 
 		local opts = {
 			theme = "doom",
 			hide = {
-				statusline = false,
+				statusline = true,
 			},
 			config = {
 				header = logo,
 
 				center = {
-					{ action = "Lazy", desc = " lazy", icon = " " },
-					{ action = "Mason", desc = " mason", icon = " " },
+					{ action = "Telescope find_files theme=dropdown", desc = "· search ·" },
 				},
 
 				footer = function()
-					local stats = require("lazy").stats()
-					local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-					return { "Reaper loaded " .. stats.loaded .. "/" .. stats.count .. " in " .. ms .. "ms" }
+					return { "To win any battle, you must fight as if you were already dead." }
 				end,
 			},
 		}
-
-		for _, button in ipairs(opts.config.center) do
-			button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
-			button.key_format = "  %s"
-		end
 
 		-- close Lazy and re-open when the dashboard is ready
 		if vim.o.filetype == "lazy" then

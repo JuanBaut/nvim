@@ -30,10 +30,11 @@ return {
 				lua = { "stylua" },
 				sh = { "beautysh" },
 				python = { "black" },
+				nix = { "nixfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
-				timeout_ms = 1000,
+				timeout_ms = 2000,
 				async = false,
 			},
 		})
@@ -42,8 +43,16 @@ return {
 			conform.format({
 				lsp_fallback = true,
 				async = false,
-				timeout_ms = 1000,
+				timeout_ms = 2000,
 			})
 		end, { desc = "Make Pretty" })
+
+		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+			group = vim.api.nvim_create_augroup("RestartPrettierd", { clear = true }),
+			pattern = "*prettier*",
+			callback = function()
+				vim.fn.system("prettierd restart")
+			end,
+		})
 	end,
 }

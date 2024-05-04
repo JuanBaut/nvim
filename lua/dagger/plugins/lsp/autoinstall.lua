@@ -6,6 +6,9 @@ return {
 
 		tooling.setup({
 			ensure_installed = {
+				"nil",
+				"nixpkgs-fmt",
+
 				"html-lsp",
 				"css-lsp",
 				"cssmodules-language-server",

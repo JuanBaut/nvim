@@ -1,10 +1,6 @@
 -- dagger's neovim keymaps
 vim.g.mapleader = " "
 
--- better save and quit
-vim.keymap.set("n", "<leader>W", "<cmd>wall<CR>", { desc = "Write all buffers" })
-vim.keymap.set("n", "Q", "<cmd>q<CR>", { desc = "Quit window" })
-
 -- quickfix navigation
 vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next quickfix item" })
 vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Prev quickfix item" })
