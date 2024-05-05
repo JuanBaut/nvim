@@ -51,6 +51,7 @@ return {
 			group = vim.api.nvim_create_augroup("RestartPrettierd", { clear = true }),
 			pattern = "*prettier*",
 			callback = function()
+				print("prettierd restart")
 				vim.fn.system("prettierd restart")
 			end,
 		})

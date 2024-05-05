@@ -57,6 +57,7 @@ return {
 			cssls = {},
 			cssmodules_ls = {},
 			tailwindcss = {},
+			jsonls = {},
 			lua_ls = {
 				settings = {
 					Lua = {
