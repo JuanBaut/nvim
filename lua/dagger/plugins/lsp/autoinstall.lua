@@ -11,6 +11,7 @@ return {
 
 				"html-lsp",
 				"css-lsp",
+				"json-lsp",
 				"cssmodules-language-server",
 				"tailwindcss-language-server",
 
