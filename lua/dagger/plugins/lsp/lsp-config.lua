@@ -17,21 +17,21 @@ return {
 					vim.keymap.set("n", keys, func, { buffer = event.buf, desc = desc })
 				end
 
-				local tscope_map = function(keys, picker, desc)
-					local telescope = function()
-						require("telescope.builtin")[picker](require("telescope.themes").get_dropdown())
-					end
-					vim.keymap.set("n", keys, telescope, { buffer = event.buf, desc = desc })
-				end
-
 				require("which-key").register({
 					["<leader>l"] = { name = "LSP" },
 				})
 
-				tscope_map("<leader>lr", "lsp_references", "LSP References")
-				tscope_map("<leader>ld", "lsp_definitions", "LSP Definitions")
-				tscope_map("<leader>li", "lsp_implementations", "LSP Implementations")
-				tscope_map("<leader>lt", "lsp_type_definitions", "LSP Type Definitions")
+				--local tscope_map = function(keys, picker, desc)
+				--	local telescope = function()
+				--		require("telescope.builtin")[picker](require("telescope.themes").get_dropdown())
+				--	end
+				--	vim.keymap.set("n", keys, telescope, { buffer = event.buf, desc = desc })
+				--end
+
+				--tscope_map("<leader>lr", "lsp_references", "LSP References")
+				--tscope_map("<leader>ld", "lsp_definitions", "LSP Definitions")
+				--tscope_map("<leader>li", "lsp_implementations", "LSP Implementations")
+				--tscope_map("<leader>lt", "lsp_type_definitions", "LSP Type Definitions")
 				map("<leader>lw", vim.lsp.buf.hover, "Documentation over Word")
 				map("<leader>lc", vim.lsp.buf.code_action, "List Code actions")
 				map("<leader>rn", vim.lsp.buf.rename, "Smart rename")

@@ -20,6 +20,7 @@ return {
 				"notify",
 				"toggleterm",
 				"lazyterm",
+				"fzf",
 			},
 		},
 	},

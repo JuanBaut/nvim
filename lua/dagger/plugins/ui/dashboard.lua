@@ -36,7 +36,7 @@ return {
 				header = logo,
 
 				center = {
-					{ action = "Telescope find_files theme=dropdown", desc = "· search ·" },
+					{ action = "FzfLua files", desc = "· search ·" },
 				},
 
 				footer = function()
