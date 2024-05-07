@@ -16,6 +16,7 @@ require("lazy").setup({
 	{ import = "dagger.plugins" },
 	{ import = "dagger.plugins.lsp" },
 	{ import = "dagger.plugins.ui" },
+	{ import = "dagger.plugins.testing" },
 })
 
 -- Documenting with which-key
