@@ -6,7 +6,7 @@ return {
 	config = function()
 		require("tokyonight").setup({
 			transparent = false,
-			style = "storm",
+			style = "moon",
 
 			on_colors = function(colors)
 				colors.bg = "#101010"
@@ -19,6 +19,6 @@ return {
 			end,
 		})
 
-		vim.cmd.colorscheme("tokyonight")
+		vim.cmd.colorscheme("tokyonight-moon")
 	end,
 }
