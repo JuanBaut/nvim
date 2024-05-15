@@ -9,6 +9,9 @@ return {
 
 		mason.setup({
 			ui = {
+				width = 0.95,
+				height = 0.8,
+				border = "rounded",
 				icons = {
 					package_installed = "✓",
 					package_pending = "󰁔",

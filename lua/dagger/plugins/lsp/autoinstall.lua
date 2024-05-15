@@ -1,14 +1,15 @@
 return {
 	"WhoIsSethDaniel/mason-tool-installer.nvim",
-	enabled = false, -- disable this on nixos
+	enabled = true, -- disable this on nixos
 	config = function()
 		local tooling = require("mason-tool-installer")
 
 		tooling.setup({
 			ensure_installed = {
-				"nil",
-				"nixpkgs-fmt",
+				--"nil",
+				--"nixpkgs-fmt",
 
+				"emmet-ls",
 				"html-lsp",
 				"css-lsp",
 				"json-lsp",

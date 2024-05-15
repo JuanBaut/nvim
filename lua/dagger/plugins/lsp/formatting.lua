@@ -60,7 +60,6 @@ return {
 			group = vim.api.nvim_create_augroup("StopPrettierd", { clear = true }),
 			pattern = { "*.ts", "*.tsx", "*.js", "*.jsx", "*.css", "*.html", "*.json" },
 			callback = function()
-				print("prettierd stop")
 				vim.fn.system("prettierd stop")
 			end,
 		})

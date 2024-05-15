@@ -53,6 +53,7 @@ return {
 		local servers = {
 			nil_ls = {},
 			pyright = {},
+			emmet_ls = {},
 			html = {},
 			cssls = {},
 			cssmodules_ls = {},

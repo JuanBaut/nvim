@@ -17,6 +17,14 @@ require("lazy").setup({
 	{ import = "dagger.plugins.lsp" },
 	{ import = "dagger.plugins.ui" },
 	{ import = "dagger.plugins.testing" },
+}, {
+	ui = {
+		border = "rounded",
+		size = {
+			width = 0.95,
+			height = 0.8,
+		},
+	},
 })
 
 -- Documenting with which-key
