@@ -2,13 +2,32 @@ return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		require("fzf-lua").setup({})
+		require("fzf-lua").setup({
+			hls = {
+				border = "FloatBorder",
+				preview_border = "FloatBorder",
+			},
+			winopts = {
+				height = 0.7,
+				row = 0.2,
+				col = 0.5,
+				preview = {
+					layout = "vertical",
+					vertical = "up:50%",
+					scrollbar = false,
+				},
+			},
+			winopts_fn = function()
+				return {
+					width = vim.o.columns > 100 and 0.46 or 0.8,
+				}
+			end,
+		})
 
 		--keybinds
 		local map = function(keys, type, desc)
 			local command = function()
 				if type == "" then
-					print("hello")
 					require("fzf-lua").builtin()
 				else
 					require("fzf-lua")[type]()

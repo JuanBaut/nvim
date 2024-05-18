@@ -1,6 +1,6 @@
 return {
 	"WhoIsSethDaniel/mason-tool-installer.nvim",
-	enabled = true, -- disable this on nixos
+	enabled = false, -- disable this on nixos
 	config = function()
 		local tooling = require("mason-tool-installer")
 
