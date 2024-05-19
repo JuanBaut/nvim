@@ -1,3 +1,5 @@
+https://github.com/JuanBaut/nvim/assets/90160941/f2a72755-965d-444c-b033-5979b9419853
+
 ## My Neovim Config (Reaper)
 
 - This neovim config never stops changing but I enjoy that.
