@@ -52,23 +52,23 @@ return {
 			},
 			completion = { completeopt = "menu,menuone,noinsert" },
 			mapping = cmp.mapping.preset.insert({
-				["<C-j>"] = cmp.mapping.select_next_item(),
-				["<C-k>"] = cmp.mapping.select_prev_item(),
+				["<c-j>"] = cmp.mapping.select_next_item(),
+				["<c-k>"] = cmp.mapping.select_prev_item(),
 
-				["<C-n>"] = cmp.mapping.scroll_docs(-4),
-				["<C-p>"] = cmp.mapping.scroll_docs(4),
+				["<c-n>"] = cmp.mapping.scroll_docs(-4),
+				["<c-p>"] = cmp.mapping.scroll_docs(4),
 
-				["<CR>"] = cmp.mapping.confirm({ select = true }),
+				["<c-y>"] = cmp.mapping.confirm({ select = true }),
 				["<c-a>"] = cmp.mapping.abort(),
 
-				["<C-Space>"] = cmp.mapping.complete({}),
+				["<c-Space>"] = cmp.mapping.complete({}),
 
-				["<C-l>"] = cmp.mapping(function()
+				["<c-l>"] = cmp.mapping(function()
 					if luasnip.expand_or_locally_jumpable() then
 						luasnip.expand_or_jump()
 					end
 				end, { "i", "s" }),
-				["<C-h>"] = cmp.mapping(function()
+				["<c-h>"] = cmp.mapping(function()
 					if luasnip.locally_jumpable(-1) then
 						luasnip.jump(-1)
 					end

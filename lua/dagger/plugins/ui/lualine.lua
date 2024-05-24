@@ -21,6 +21,10 @@ return {
 			theme = "auto",
 			icons_enabled = true,
 			globalstatus = true,
+			disabled_filetypes = {
+				"dashboard",
+			},
+
 			--component_separators = { left = "│", right = "│" },
 			--section_separators = { left = "", right = "" },
 		},
@@ -51,6 +55,7 @@ return {
 			"neo-tree",
 			"mason",
 			"lazy",
+			"fzf",
 		},
 	},
 }

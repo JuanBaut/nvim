@@ -12,7 +12,7 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 -- least amount of lines while scrolling is 8
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
