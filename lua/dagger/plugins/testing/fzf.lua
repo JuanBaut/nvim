@@ -3,6 +3,9 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		require("fzf-lua").setup({
+			grep = {
+				rg_opts = "--multiline",
+			},
 			hls = {
 				border = "FloatBorder",
 				preview_border = "FloatBorder",
@@ -41,6 +44,7 @@ return {
 		map("<leader>sh", "help_tags", "Help")
 		map("<leader>sb", "buffers", "Buffers")
 		map("<leader>sg", "live_grep", "Grep Word")
+		map("<leader>sv", "grep_visual", "Grep Visual")
 		map("<leader>sr", "oldfiles", "Recent files")
 		map("<leader>sc", "grep_cword", "Current Word")
 		map("<leader>sd", "diagnostics_document", "Diagnostics")
