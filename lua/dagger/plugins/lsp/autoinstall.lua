@@ -29,6 +29,8 @@ return {
 				"black",
 				"ruff",
 				"mypy",
+
+				"zls",
 			},
 		})
 	end,

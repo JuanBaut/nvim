@@ -51,6 +51,7 @@ return {
 		end
 
 		local servers = {
+			zls = {},
 			nil_ls = {},
 			pyright = {},
 			emmet_ls = {},
