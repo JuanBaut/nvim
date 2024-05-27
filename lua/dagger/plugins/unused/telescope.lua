@@ -49,3 +49,15 @@ return {
 		keymap.set("n", "<leader>sd", "<cmd>Telescope diagnostics theme=dropdown<cr>", { desc = "Diagnostics" })
 	end,
 }
+
+--local tscope_map = function(keys, picker, desc)
+--	local telescope = function()
+--		require("telescope.builtin")[picker](require("telescope.themes").get_dropdown())
+--	end
+--	vim.keymap.set("n", keys, telescope, { buffer = event.buf, desc = desc })
+--end
+
+--tscope_map("<leader>lr", "lsp_references", "LSP References")
+--tscope_map("<leader>ld", "lsp_definitions", "LSP Definitions")
+--tscope_map("<leader>li", "lsp_implementations", "LSP Implementations")
+--tscope_map("<leader>lt", "lsp_type_definitions", "LSP Type Definitions")

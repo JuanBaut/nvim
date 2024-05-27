@@ -21,17 +21,6 @@ return {
 					["<leader>l"] = { name = "LSP" },
 				})
 
-				--local tscope_map = function(keys, picker, desc)
-				--	local telescope = function()
-				--		require("telescope.builtin")[picker](require("telescope.themes").get_dropdown())
-				--	end
-				--	vim.keymap.set("n", keys, telescope, { buffer = event.buf, desc = desc })
-				--end
-
-				--tscope_map("<leader>lr", "lsp_references", "LSP References")
-				--tscope_map("<leader>ld", "lsp_definitions", "LSP Definitions")
-				--tscope_map("<leader>li", "lsp_implementations", "LSP Implementations")
-				--tscope_map("<leader>lt", "lsp_type_definitions", "LSP Type Definitions")
 				map("<leader>lw", vim.lsp.buf.hover, "Documentation over Word")
 				map("<leader>lc", vim.lsp.buf.code_action, "List Code actions")
 				map("<leader>rn", vim.lsp.buf.rename, "Smart rename")
@@ -56,10 +45,22 @@ return {
 			pyright = {},
 			emmet_ls = {},
 			html = {},
-			cssls = {},
+			jsonls = {},
 			cssmodules_ls = {},
 			tailwindcss = {},
-			jsonls = {},
+			cssls = {
+				settings = {
+					css = { validate = true, lint = {
+						unknownAtRules = "ignore",
+					} },
+					scss = { validate = true, lint = {
+						unknownAtRules = "ignore",
+					} },
+					less = { validate = true, lint = {
+						unknownAtRules = "ignore",
+					} },
+				},
+			},
 			lua_ls = {
 				settings = {
 					Lua = {

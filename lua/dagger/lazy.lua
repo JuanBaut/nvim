@@ -14,9 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{ import = "dagger.plugins" },
-	{ import = "dagger.plugins.lsp" },
 	{ import = "dagger.plugins.ui" },
-	{ import = "dagger.plugins.testing" },
+	{ import = "dagger.plugins.lsp" },
+	{ import = "dagger.plugins.unused" },
 	{ import = "dagger.plugins.colorschemes" },
 }, {
 	ui = {
