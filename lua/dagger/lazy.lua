@@ -17,6 +17,7 @@ require("lazy").setup({
 	{ import = "dagger.plugins.lsp" },
 	{ import = "dagger.plugins.ui" },
 	{ import = "dagger.plugins.testing" },
+	{ import = "dagger.plugins.colorschemes" },
 }, {
 	ui = {
 		border = "rounded",
