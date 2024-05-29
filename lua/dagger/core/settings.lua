@@ -35,6 +35,9 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 -- line wrapping
 vim.opt.wrap = false
 

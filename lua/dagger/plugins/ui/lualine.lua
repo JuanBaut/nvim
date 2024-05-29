@@ -25,8 +25,8 @@ return {
 				"dashboard",
 			},
 
-			--component_separators = { left = "│", right = "│" },
-			--section_separators = { left = "", right = "" },
+			component_separators = { left = "", right = "" },
+			section_separators = { left = "", right = "" },
 		},
 		sections = {
 			lualine_a = {
@@ -44,14 +44,14 @@ return {
 				{ "diff", symbols = { added = " ", modified = " ", removed = " " } },
 			},
 			lualine_y = {
-				{ "filetype", colored = false, icon = { align = "right" } },
+				"progress",
 			},
 			lualine_z = {
-				"progress",
-				"location",
+				{ "filetype", colored = false, icon = { align = "right" } },
 			},
 		},
 		extensions = {
+			"nvim-tree",
 			"neo-tree",
 			"mason",
 			"lazy",

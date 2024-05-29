@@ -15,11 +15,14 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
 	group = vim.api.nvim_create_augroup("Color", {}),
 	pattern = "*",
 	callback = function()
-		modify_hl("WinSeparator", { link = "FloatBorder" })
-		modify_hl("NeoTreeGitUnstaged", { link = "@comment.hint" })
-		modify_hl("NeoTreeGitModified", { link = "@comment.hint" })
-		modify_hl("NeoTreeGitRenamed", { link = "@comment.info" })
+		modify_hl("WinSeparator", { link = "AerialGuide" })
+		modify_hl("NeoTreeDirectoryIcon", { link = "AerialGuide" })
+		modify_hl("NeoTreeIndentMarker", { link = "AerialGuide" })
+
+		modify_hl("NeoTreeGitUnstaged", { link = "@comment.info" })
+		modify_hl("NeoTreeGitModified", { link = "@comment.info" })
+		modify_hl("NeoTreeGitUntracked", { link = "@comment.hint" })
+		modify_hl("NeoTreeGitRenamed", { link = "@comment.warning" })
 		modify_hl("NeoTreeGitConflict", { link = "@comment.error" })
-		modify_hl("NeoTreeGitUntracked", { link = "@constant.macro" })
 	end,
 })

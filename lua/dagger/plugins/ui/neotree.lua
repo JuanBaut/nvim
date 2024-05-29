@@ -1,5 +1,6 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
+	--enabled = false,
 	branch = "v3.x",
 	event = "VeryLazy",
 	dependencies = {
@@ -11,13 +12,6 @@ return {
 
 	config = function()
 		local keymap = vim.keymap
-
-		keymap.set(
-			"n",
-			"<leader>fg",
-			"<cmd>Neotree toggle focus float git_status<cr>",
-			{ desc = "Git status with neotree" }
-		)
 		keymap.set(
 			"n",
 			"<leader>fe",
@@ -29,6 +23,45 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		require("neo-tree").setup({
+			default_component_configs = {
+				indent = {
+					indent_size = 2,
+					padding = 0,
+				},
+				icon = {
+					folder_closed = "󰉋",
+					folder_open = "󰝰",
+					folder_empty = "󰉖",
+					highlight = "AerialGuide",
+				},
+				modified = {
+					symbol = "",
+				},
+				diagnostics = {
+					symbols = {
+						hint = "",
+						info = "",
+						warn = "",
+						error = "",
+					},
+				},
+				git_status = {
+					symbols = {
+						-- Change type
+						added = "",
+						deleted = "",
+						modified = "",
+						renamed = "",
+						-- Status type
+						untracked = "",
+						unstaged = "",
+						ignored = "",
+						staged = "",
+						conflict = "",
+					},
+				},
+			},
+
 			popup_border_style = "rounded",
 			event_handlers = { -- Close neo-tree when opening a file.
 				{
@@ -39,6 +72,12 @@ return {
 				},
 			},
 			filesystem = {
+				filtered_items = {
+					group_empty_dirs = true,
+					never_show = {
+						".DS_Store",
+					},
+				},
 				bind_to_cwd = true, -- true creates a 2-way binding between vim's cwd and neo-tree's root
 				window = {
 					mappings = {
@@ -46,9 +85,6 @@ return {
 						["<space>"] = "none",
 					},
 				},
-				--filtered_items = {
-				--	visible = true,
-				--},
 			},
 		})
 	end,
