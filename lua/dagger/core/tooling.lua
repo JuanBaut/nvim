@@ -18,3 +18,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, { desc = "Organize and Add imports" })
 	end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.cmd("TwilightEnable")
+	end,
+})
