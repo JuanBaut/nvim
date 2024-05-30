@@ -6,13 +6,8 @@ return {
 			inactive = true,
 			color = { "AerialGuide" },
 		},
-		treesitter = true,
+		treesitter = false,
 		context = 1000,
-		expand = { -- for treesitter, we we always try to expand to the top-most ancestor with these types
-			"function",
-			"method",
-			"table",
-			"if_statement",
-		},
+		expand = {},
 	},
 }

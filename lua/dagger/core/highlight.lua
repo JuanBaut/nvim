@@ -16,8 +16,8 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
 	pattern = "*",
 	callback = function()
 		modify_hl("WinSeparator", { link = "AerialGuide" })
-		modify_hl("NeoTreeDirectoryIcon", { link = "AerialGuide" })
-		modify_hl("NeoTreeIndentMarker", { link = "AerialGuide" })
+		modify_hl("NeoTreeDirectoryIcon", { link = "@attribute" })
+		modify_hl("NeoTreeIndentMarker", { link = "@attribute" })
 
 		modify_hl("NeoTreeGitUnstaged", { link = "@comment.info" })
 		modify_hl("NeoTreeGitModified", { link = "@comment.info" })
