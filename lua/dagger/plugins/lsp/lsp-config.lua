@@ -48,6 +48,7 @@ return {
 			jsonls = {},
 			cssmodules_ls = {},
 			tailwindcss = {},
+			eslint = {},
 			cssls = {
 				settings = {
 					css = { validate = true, lint = {

@@ -1,23 +1,26 @@
 return {
 	"WhoIsSethDaniel/mason-tool-installer.nvim",
-	enabled = false, -- disable this on nixos
+	enabled = true, -- disable this on nixos
 	config = function()
 		local tooling = require("mason-tool-installer")
 
 		tooling.setup({
 			ensure_installed = {
+				--"zls",
 				--"nil",
 				--"nixpkgs-fmt",
+				--"prettier",
+				--"prettierd",
+				--"eslint_d",
 
+				"eslint-lsp",
 				"emmet-ls",
 				"html-lsp",
 				"css-lsp",
 				"json-lsp",
 				"cssmodules-language-server",
 				"tailwindcss-language-server",
-
-				"prettier",
-				"eslint_d",
+				"typescript-language-server",
 
 				"lua-language-server",
 				"stylua",
@@ -29,8 +32,6 @@ return {
 				"black",
 				"ruff",
 				"mypy",
-
-				"zls",
 			},
 		})
 	end,
