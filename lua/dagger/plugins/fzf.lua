@@ -3,9 +3,6 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		require("fzf-lua").setup({
-			grep = {
-				rg_opts = "--multiline",
-			},
 			hls = {
 				border = "FloatBorder",
 				preview_border = "FloatBorder",

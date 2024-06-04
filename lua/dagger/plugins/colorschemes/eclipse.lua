@@ -1,13 +1,10 @@
 return {
-	"folke/twilight.nvim",
+	"JuanBaut/eclipse.nvim",
 	opts = {
 		dimming = {
 			alpha = 1,
-			inactive = true,
 			color = { "AerialGuide" },
 		},
-		treesitter = false,
-		context = 1000,
 		expand = {},
 	},
 }
