@@ -1,5 +1,6 @@
 return {
 	"JuanBaut/eclipse.nvim",
+	enabled = false,
 	opts = {
 		dimming = {
 			alpha = 1,
