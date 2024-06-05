@@ -35,7 +35,7 @@ return {
 					highlight = "AerialGuide",
 				},
 				modified = {
-					symbol = "",
+					symbol = " ",
 				},
 				diagnostics = {
 					symbols = {
