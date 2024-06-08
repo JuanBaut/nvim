@@ -15,6 +15,7 @@ return {
 				},
 				indent = { enable = true },
 				ensure_installed = {
+					"jsonc",
 					"json",
 					"javascript",
 					"typescript",
