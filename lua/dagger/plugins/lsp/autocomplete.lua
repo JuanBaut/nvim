@@ -52,14 +52,14 @@ return {
 			},
 			completion = { completeopt = "menu,menuone,noinsert" },
 			mapping = cmp.mapping.preset.insert({
-				["<c-j>"] = cmp.mapping.select_next_item(),
-				["<c-k>"] = cmp.mapping.select_prev_item(),
+				["<c-n>"] = cmp.mapping.select_next_item(),
+				["<c-p>"] = cmp.mapping.select_prev_item(),
 
-				["<c-n>"] = cmp.mapping.scroll_docs(-4),
-				["<c-p>"] = cmp.mapping.scroll_docs(4),
+				["<c-k>"] = cmp.mapping.scroll_docs(-4),
+				["<c-j>"] = cmp.mapping.scroll_docs(4),
 
 				["<c-y>"] = cmp.mapping.confirm({ select = true }),
-				["<c-a>"] = cmp.mapping.abort(),
+				["<c-c>"] = cmp.mapping.abort(),
 
 				["<c-Space>"] = cmp.mapping.complete({}),
 
@@ -102,9 +102,9 @@ return {
 
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
-				fields = { "kind", "abbr" },
+				fields = { "abbr", "kind" },
 				format = function(entry, vim_item)
-					local kind = require("lspkind").cmp_format({
+					local kind = lspkind.cmp_format({
 						mode = "symbol",
 						maxwidth = 20,
 						ellipsis_char = "...",
