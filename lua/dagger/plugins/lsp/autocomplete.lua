@@ -102,7 +102,7 @@ return {
 
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
-				fields = { "abbr", "kind" },
+				fields = { "abbr", "kind", "menu" },
 				format = function(entry, vim_item)
 					local kind = lspkind.cmp_format({
 						mode = "symbol",
@@ -111,6 +111,7 @@ return {
 					})(entry, vim_item)
 					local strings = vim.split(kind.kind, "%s")
 					kind.kind = (strings[1] or "") .. " "
+					kind.menu = ""
 					return kind
 				end,
 			},
