@@ -14,7 +14,9 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "" })
 
 -- unbinds
-vim.keymap.set("c", "<c-j>", "<nop>")
+vim.keymap.set({ "c", "i", "t" }, "<c-j>", "<nop>")
+vim.keymap.set({ "c", "i", "t" }, "<c-k>", "<nop>")
+
 vim.keymap.set({ "n", "v" }, "Y", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<C-l>", "<nop>")
 vim.keymap.set({ "n", "v" }, "Q", "<nop>")
@@ -26,7 +28,7 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous result in search /" })
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
-vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]], { desc = "Paste from system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>p", [[o<esc>"+p]], { desc = "Paste from system clipboard" })
 
 -- replace current word
 vim.keymap.set(
