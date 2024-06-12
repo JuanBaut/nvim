@@ -9,31 +9,6 @@ return {
 				preview_border = "FloatBorder",
 				header_text = "Comment",
 				header_bind = "Comment",
-				--normal = "FloatBorder",
-				--title = "FloatBorder",
-				--preview_normal = "FloatBorder",
-				--preview_title = "FloatBorder",
-				--cursor = "FloatBorder",
-				--cursorline = "FloatBorder",
-				--cursorlinenr = "FloatBorder",
-				--search = "FloatBorder",
-				--scrollborder_e = "FloatBorder",
-				--scrollborder_f = "FloatBorder",
-				--scrollfloat_e = "FloatBorder",
-				--scrollfloat_f = "FloatBorder",
-				--help_normal = "FloatBorder",
-				--help_border = "FloatBorder",
-				--path_colnr = "FloatBorder",
-				--path_linenr = "FloatBorder",
-				--buf_name = "FloatBorder",
-				--buf_nr = "FloatBorder",
-				--buf_flag_cur = "FloatBorder",
-				--buf_flag_alt = "FloatBorder",
-				--tab_title = "FloatBorder",
-				--tab_marker = "FloatBorder",
-				--dir_icon = "FloatBorder",
-				--dir_part = "FloatBorder",
-				--live_sym = "FloatBorder",
 			},
 			actions = {
 				files = {
@@ -44,22 +19,25 @@ return {
 				},
 			},
 			fzf_colors = {
-				["fg"] = { "fg", "Comment" },
-				["bg"] = { "bg", "Normal" },
-				["hl"] = { "fg", "Special" },
+				["fg"] = { "fg", "Conceal" },
 				["fg+"] = { "fg", "Normal" },
-				["bg+"] = { "bg", "CursorLine" },
-				["hl+"] = { "fg", "Statement" },
+
+				["bg"] = { "bg", "Normal" },
+				["bg+"] = { "bg", "Normal" },
+
+				["hl"] = { "fg", "Special" },
+				["hl+"] = { "fg", "Special" },
+
 				["info"] = { "fg", "PreProc" },
 				["prompt"] = { "fg", "Comment" },
-				["pointer"] = { "fg", "Exception" },
+				["pointer"] = { "fg", "Special" },
 				["marker"] = { "fg", "Keyword" },
 				["spinner"] = { "fg", "Label" },
 				["header"] = { "fg", "Comment" },
 				["gutter"] = { "bg", "Normal" },
 			},
 			winopts = {
-				height = 0.7,
+				height = 0.6,
 				width = 76,
 				row = 0,
 				col = 0.48,
@@ -75,9 +53,17 @@ return {
 		local map = function(keys, type, desc)
 			local command = function()
 				if type == "" then
-					require("fzf-lua").builtin()
+					require("fzf-lua").builtin({
+						winopts = {
+							height = 0.2,
+							width = 40,
+							row = 0.4,
+							col = 0.48,
+						},
+					})
 				elseif type == "files" then
 					require("fzf-lua").files({
+						file_icons = false,
 						git_icons = false,
 						color_icons = false,
 					})
