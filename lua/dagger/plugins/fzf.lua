@@ -61,14 +61,12 @@ return {
 							col = 0.48,
 						},
 					})
-				elseif type == "files" then
-					require("fzf-lua").files({
+				else
+					require("fzf-lua")[type]({
 						file_icons = false,
 						git_icons = false,
 						color_icons = false,
 					})
-				else
-					require("fzf-lua")[type]()
 				end
 			end
 			vim.keymap.set("n", keys, command, { desc = desc })
