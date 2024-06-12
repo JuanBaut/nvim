@@ -6,13 +6,13 @@ return {
 		require("tokyonight").setup({
 			transparent = false,
 			on_colors = function(colors)
-				colors.bg = "#101010"
-				colors.bg_dark = "#101010"
-				colors.bg_float = "#101010"
-				colors.bg_popup = "#101010"
-				colors.bg_search = "#101010"
-				colors.bg_sidebar = "#101010"
-				colors.bg_statusline = "#101010"
+				colors.bg = "#15141b"
+				colors.bg_dark = "#15141b"
+				colors.bg_float = "#15141b"
+				colors.bg_popup = "#15141b"
+				colors.bg_search = "#15141b"
+				colors.bg_sidebar = "#15141b"
+				colors.bg_statusline = "#15141b"
 			end,
 		})
 
