@@ -40,7 +40,7 @@ return {
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
 
-		keymap.set("n", "<leader>sf", "<cmd>Telescope find_files theme=dropdown<cr>", { desc = "Files" })
+		keymap.set("n", "<leader>bb", "<cmd>Telescope find_files theme=dropdown<cr>", { desc = "Files" })
 		keymap.set("n", "<leader>sb", "<cmd>Telescope buffers theme=dropdown<cr>", { desc = "Buffers" })
 		keymap.set("n", "<leader>sr", "<cmd>Telescope oldfiles theme=dropdown<cr>", { desc = "Recent files" })
 		keymap.set("n", "<leader>sg", "<cmd>Telescope live_grep theme=dropdown<cr>", { desc = "Grep Word" })

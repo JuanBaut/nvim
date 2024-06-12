@@ -28,7 +28,8 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous result in search /" })
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
-vim.keymap.set({ "n", "v" }, "<leader>p", [[o<esc>"+p]], { desc = "Paste from system clipboard" })
+vim.keymap.set("n", "<leader>p", [[o<esc>"+p]], { desc = "Paste from system clipboard" })
+vim.keymap.set("v", "<leader>p", [["+p]], { desc = "Paste from system clipboard" })
 
 -- replace current word
 vim.keymap.set(
