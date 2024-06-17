@@ -40,7 +40,7 @@ return {
 				height = 0.6,
 				width = 76,
 				row = 0,
-				col = 0.48,
+				col = 0.5,
 				preview = {
 					layout = "vertical",
 					vertical = "up:44%",
