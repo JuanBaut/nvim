@@ -2,5 +2,5 @@ require("dagger.core")
 require("dagger.lazy")
 
 if vim.g.neovide then
-	vim.o.guifont = "JetBrainsMono Nerd Font Propo:h16.5"
+	vim.o.guifont = "GeistMono Nerd Font Propo:h17"
 end
