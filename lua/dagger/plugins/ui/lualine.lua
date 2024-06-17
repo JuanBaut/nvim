@@ -22,7 +22,7 @@ return {
 			icons_enabled = true,
 			globalstatus = true,
 			disabled_filetypes = {
-				"dashboard",
+				"alpha",
 			},
 
 			--component_separators = { left = "", right = "" },
