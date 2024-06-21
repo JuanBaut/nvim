@@ -1,8 +1,6 @@
 return {
 	"cbochs/grapple.nvim",
-	dependencies = {
-		{ "nvim-tree/nvim-web-devicons", lazy = true },
-	},
+	dependencies = {},
 	config = function()
 		vim.keymap.set("n", "ma", require("grapple").toggle, { desc = "Toggle to grapple" })
 		vim.keymap.set("n", "M", require("grapple").toggle_tags)

@@ -1,11 +1,9 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
-	--enabled = false,
 	branch = "v3.x",
 	event = "VeryLazy",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
 		"3rd/image.nvim",
 	},
@@ -25,24 +23,25 @@ return {
 		require("neo-tree").setup({
 			default_component_configs = {
 				indent = {
-					indent_size = 2,
+					indent_size = 1,
 					padding = 0,
+					with_markers = false,
 				},
 				icon = {
-					folder_closed = "󰉋",
-					folder_open = "󰝰",
-					folder_empty = "󰉖",
-					highlight = "AerialGuide",
+					folder_closed = "+",
+					folder_open = "─",
+					folder_empty = "/",
+					default = " ",
 				},
 				modified = {
 					symbol = " ",
 				},
 				diagnostics = {
 					symbols = {
-						hint = "",
-						info = "",
-						warn = "",
-						error = "",
+						hint = "h",
+						info = "i",
+						warn = "w",
+						error = "e",
 					},
 				},
 				git_status = {
@@ -73,9 +72,11 @@ return {
 			},
 			filesystem = {
 				filtered_items = {
+					hide_dotfiles = false,
 					group_empty_dirs = true,
 					never_show = {
 						".DS_Store",
+						".git",
 					},
 				},
 				bind_to_cwd = true, -- true creates a 2-way binding between vim's cwd and neo-tree's root

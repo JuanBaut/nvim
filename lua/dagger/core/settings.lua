@@ -28,8 +28,9 @@ vim.opt.shiftwidth = 2
 vim.opt.breakindent = true
 
 -- indent symbols
-vim.opt.list = true
-vim.opt.listchars = { tab = "· ", trail = " ", nbsp = "␣" }
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = "· ", trail = " ", nbsp = "␣" }
+-- vim.opt.listchars = { tab = " ", trail = " ", nbsp = " " }
 
 vim.opt.expandtab = true
 vim.opt.smartindent = true

@@ -47,19 +47,25 @@ return {
 			})
 		end, { desc = "Make Pretty" })
 
+		vim.keymap.set("n", "<leader>mr", function()
+			vim.notify("Restarting prettierd...")
+			vim.fn.system("prettierd restart")
+		end, { desc = "Make Restart" })
+
 		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 			group = vim.api.nvim_create_augroup("RestartPrettierd", { clear = true }),
 			pattern = "*prettier*",
 			callback = function()
-				print("prettierd restart")
+				vim.notify("Restarting prettierd...")
 				vim.fn.system("prettierd restart")
 			end,
 		})
 
-		vim.api.nvim_create_autocmd({ "VimLeave", "VimLeavePre" }, {
+		vim.api.nvim_create_autocmd("VimLeavePre", {
 			group = vim.api.nvim_create_augroup("StopPrettierd", { clear = true }),
 			pattern = { "*.ts", "*.tsx", "*.js", "*.jsx", "*.css", "*.html", "*.json" },
 			callback = function()
+				vim.notify("Stopping prettierd...")
 				vim.fn.system("prettierd stop")
 			end,
 		})
