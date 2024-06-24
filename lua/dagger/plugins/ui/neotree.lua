@@ -34,7 +34,7 @@ return {
 					default = " ",
 				},
 				modified = {
-					symbol = " ",
+					symbol = "*",
 				},
 				diagnostics = {
 					symbols = {
