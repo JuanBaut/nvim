@@ -18,7 +18,7 @@ return {
 				},
 			},
 			fzf_colors = {
-				["fg"] = { "fg", "Conceal" },
+				["fg"] = { "fg", "Comment" },
 				["fg+"] = { "fg", "Normal" },
 
 				["bg"] = { "bg", "Normal" },
