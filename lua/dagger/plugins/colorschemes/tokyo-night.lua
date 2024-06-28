@@ -11,10 +11,10 @@ return {
 				colors.bg_float = "#000000"
 				colors.bg_popup = "#000000"
 				colors.bg_search = "#000000"
-				colors.bg_sidebar = "#0A0A0A"
-				colors.bg_statusline = "#0A0A0A"
+				colors.bg_sidebar = "#000000"
+				colors.bg_statusline = "#000000"
 			end,
 		})
-		--vim.cmd.colorscheme("tokyonight-night")
+		vim.cmd.colorscheme("tokyonight")
 	end,
 }

@@ -99,5 +99,9 @@ return {
 		for server_name, server_config in pairs(servers) do
 			bind_lsp(server_name, server_config)
 		end
+
+		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+			border = "rounded",
+		})
 	end,
 }
