@@ -15,6 +15,6 @@ return {
 				colors.bg_statusline = "#000000"
 			end,
 		})
-		vim.cmd.colorscheme("tokyonight")
+		--vim.cmd.colorscheme("tokyonight")
 	end,
 }
