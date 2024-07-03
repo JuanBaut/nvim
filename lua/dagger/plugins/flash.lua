@@ -2,12 +2,20 @@ return {
 	"folke/flash.nvim",
 	event = "VeryLazy",
 	opts = {
-		--label = {
-		--	rainbow = {
-		--		enabled = true,
-		--		shade = 4,
-		--	},
-		--},
+		highlight = {
+			-- show a backdrop with hl FlashBackdrop
+			backdrop = true,
+			-- Highlight the search matches
+			matches = true,
+			-- extmark priority
+			priority = 5000,
+			groups = {
+				match = "DiagnosticVirtualTextHint",
+				current = "DiagnosticVirtualTextInfo",
+				backdrop = "FlashBackdrop",
+				label = "DiagnosticVirtualTextError",
+			},
+		},
 		modes = {
 			char = {
 				enabled = false,

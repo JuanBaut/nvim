@@ -18,22 +18,20 @@ return {
 				},
 			},
 			fzf_colors = {
+				--["bg"] = { "bg", "Normal" },
+				--["bg+"] = { "bg", "Normal" },
 				["fg"] = { "fg", "Comment" },
 				["fg+"] = { "fg", "Normal" },
-
-				["bg"] = { "bg", "Normal" },
-				["bg+"] = { "bg", "Normal" },
-
 				["hl"] = { "fg", "Special" },
 				["hl+"] = { "fg", "Special" },
-
 				["info"] = { "fg", "PreProc" },
 				["prompt"] = { "fg", "Comment" },
 				["pointer"] = { "fg", "Special" },
 				["marker"] = { "fg", "Keyword" },
 				["spinner"] = { "fg", "Label" },
 				["header"] = { "fg", "Comment" },
-				["gutter"] = { "bg", "Normal" },
+				["separator"] = { "fg", "FloatBorder" },
+				["scrollbar"] = { "fg", "FloatBorder" },
 			},
 			winopts = {
 				height = 0.6,
