@@ -25,14 +25,7 @@ return {
 			default_component_configs = {
 				indent = {
 					indent_size = 2,
-					padding = 0,
 				},
-				--icon = {
-				--	folder_closed = "+",
-				--	folder_open = "─",
-				--	folder_empty = "/",
-				--	default = " ",
-				--},
 				modified = {
 					symbol = "*",
 				},
