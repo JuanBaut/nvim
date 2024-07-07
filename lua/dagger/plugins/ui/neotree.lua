@@ -3,6 +3,7 @@ return {
 	branch = "v3.x",
 	event = "VeryLazy",
 	dependencies = {
+		"nvim-tree/nvim-web-devicons",
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		"3rd/image.nvim",
@@ -23,16 +24,15 @@ return {
 		require("neo-tree").setup({
 			default_component_configs = {
 				indent = {
-					indent_size = 1,
+					indent_size = 2,
 					padding = 0,
-					with_markers = false,
 				},
-				icon = {
-					folder_closed = "+",
-					folder_open = "─",
-					folder_empty = "/",
-					default = " ",
-				},
+				--icon = {
+				--	folder_closed = "+",
+				--	folder_open = "─",
+				--	folder_empty = "/",
+				--	default = " ",
+				--},
 				modified = {
 					symbol = "*",
 				},
