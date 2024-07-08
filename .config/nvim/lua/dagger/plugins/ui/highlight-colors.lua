@@ -3,8 +3,10 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	init = function()
 		require("nvim-highlight-colors").setup({
-			render = "vitual",
-			virtual_symbol = " ",
+			render = "virtual",
+			virtual_symbol = " ",
+			virtual_symbol_suffix = "",
+			virtual_symbol_position = "eol",
 		})
 	end,
 }

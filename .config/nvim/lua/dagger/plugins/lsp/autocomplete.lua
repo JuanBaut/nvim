@@ -111,7 +111,7 @@ return {
 					})(entry, item)
 
 					local strings = vim.split(new_item.kind, "%s")
-					new_item.kind = (strings[1] or "") .. " "
+					new_item.kind = (strings[1] or "")
 					new_item.menu = ""
 
 					if color.abbr_hl_group then
