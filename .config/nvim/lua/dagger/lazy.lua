@@ -20,7 +20,7 @@ require("lazy").setup({
 	{ import = "dagger.plugins.colorschemes" },
 }, {
 	dev = {
-		path = "~/code/neovim_dev",
+		path = "~/dev/neovim",
 	},
 	ui = {
 		border = "rounded",
