@@ -1,5 +1,6 @@
 return {
 	dir = "~/dev/neovim/lackluster.nvim",
+	enabled = false,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
@@ -10,14 +11,15 @@ return {
 		local lackluster = require("lackluster")
 
 		lackluster.setup({
+			-- ('default' is default) ('#ffaaff' is a custom colorcode)
 			tweak_pallet = {
-				lack = "#c3e88d",
-				luster = "#b4f9f8 ",
+				lack = "#c3e88d", -- works in lualine
+				luster = "#b4f9f8 ", -- doesnt work in syntax
 				orange = "default",
 				yellow = "default",
 				green = "default",
 				blue = "default",
-				red = "#ff757f",
+				red = "#ff757f", -- doesnt work in errors
 				black = "default",
 				gray1 = "default",
 				gray2 = "default",
@@ -27,7 +29,7 @@ return {
 				gray6 = "default",
 				gray7 = "default",
 				gray8 = "default",
-				gray9 = "default",
+				gray9 = "default", -- some of the gray values get chaged
 			},
 		})
 
