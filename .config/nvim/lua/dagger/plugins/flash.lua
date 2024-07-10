@@ -3,17 +3,14 @@ return {
 	event = "VeryLazy",
 	opts = {
 		highlight = {
-			-- show a backdrop with hl FlashBackdrop
 			backdrop = true,
-			-- Highlight the search matches
 			matches = true,
-			-- extmark priority
 			priority = 5000,
 			groups = {
-				match = "DiagnosticVirtualTextHint",
-				current = "DiagnosticVirtualTextInfo",
+				--match = "something",
+				--current = "something",
 				backdrop = "FlashBackdrop",
-				label = "DiagnosticVirtualTextError",
+				label = "Substitute",
 			},
 		},
 		modes = {

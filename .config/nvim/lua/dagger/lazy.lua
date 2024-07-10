@@ -16,8 +16,9 @@ require("lazy").setup({
 	{ import = "dagger.plugins" },
 	{ import = "dagger.plugins.ui" },
 	{ import = "dagger.plugins.lsp" },
+	{ import = "dagger.plugins.dev" },
 	{ import = "dagger.plugins.unused" },
-	{ import = "dagger.plugins.colorschemes" },
+	{ import = "dagger.plugins.colors" },
 }, {
 	dev = {
 		path = "~/dev/neovim",

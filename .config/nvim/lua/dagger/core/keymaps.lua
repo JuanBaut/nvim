@@ -26,10 +26,11 @@ vim.keymap.set("n", "J", "mzJ`z", { desc = "Move current line up" })
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next result in search /" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous result in search /" })
 
--- next greatest remap ever : asbjornHaland
+-- next greatest remap ever : asbjornHaland (yanking and pasting)
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
 vim.keymap.set("n", "<leader>p", [[o<esc>"+p]], { desc = "Paste from system clipboard" })
 vim.keymap.set("v", "<leader>p", [["+p]], { desc = "Paste from system clipboard" })
+vim.keymap.set("v", "<leader>d", [["_d]], { desc = "Paste from system clipboard" })
 
 -- replace current word
 vim.keymap.set(
