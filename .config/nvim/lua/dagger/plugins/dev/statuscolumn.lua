@@ -5,6 +5,8 @@ return {
 	lazy = false,
 	dev = true,
 	config = function()
-		require("statuscolumn").setup({})
+		require("statuscolumn").setup({
+			gradient_hl = "Special",
+		})
 	end,
 }
