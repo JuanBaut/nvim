@@ -14,7 +14,9 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
 	group = vim.api.nvim_create_augroup("Color", {}),
 	pattern = "*",
 	callback = function()
+		modify_hl("CursorLine", { link = "None" })
 		modify_hl("WinSeparator", { link = "FloatBorder" })
+		modify_hl("DiagnosticUnnecessary", { underline = true })
 		modify_hl("NeoTreeDirectoryIcon", { link = "Function" })
 		modify_hl("NeoTreeDirectoryName", { link = "Function" })
 
