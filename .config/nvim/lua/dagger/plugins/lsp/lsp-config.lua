@@ -26,7 +26,7 @@ return {
 				map("<leader>rn", vim.lsp.buf.rename, "Smart rename")
 
 				-- Diagnostics
-				map("<leader>lD", vim.diagnostic.open_float, "Show line diagnostics")
+				map("<leader>d", vim.diagnostic.open_float, "Show line diagnostics")
 				map("[d", vim.diagnostic.goto_prev, "Go to previous diagnostic")
 				map("]d", vim.diagnostic.goto_next, "Go to next diagnostic")
 			end,
