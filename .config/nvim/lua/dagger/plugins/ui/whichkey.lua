@@ -2,25 +2,43 @@ return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
 	init = function()
-		vim.o.timeout = true
-		vim.o.timeoutlen = 180
+		-- Documenting with which-key
+		require("which-key").add({
+			{ "<leader>l", group = "LSP" },
+			{ "<leader>f", group = "Filetree" },
+			{ "<leader>m", group = "Format or Linting" },
+			{ "<leader>r", group = "Rename" },
+			{ "<leader>s", group = "Search" },
+			{ "<leader>t", group = "Tabs" },
+			{ "<leader>u", group = "Buffers" },
+			{ "<leader>w", group = "Wins" },
+		})
 	end,
 	opts = {
-		plugins = {
-			presets = {
-				motions = false,
-				windows = false,
-				nav = false,
+		preset = "modern",
+		win = {
+			border = "none",
+			padding = { 1, 1 },
+		},
+		icons = {
+			rules = false,
+			keys = {
+				Up = " ",
+				Down = " ",
+				Left = " ",
+				Right = " ",
+				C = "ctrl ",
+				M = "meta ",
+				S = "shft ",
+				CR = "retr ",
+				Esc = "esc ",
+				ScrollWheelDown = "󱕐 ",
+				ScrollWheelUp = "󱕑 ",
+				NL = "newl ",
+				BS = "bks ",
+				Space = "spc ",
+				Tab = "tab ",
 			},
-		},
-		window = {
-			border = "rounded",
-		},
-		key_labels = {
-			["<space>"] = "SPC",
-			["<cr>"] = "RET",
-			["<tab>"] = "TAB",
-			["<bs>"] = "BKS",
 		},
 	},
 }

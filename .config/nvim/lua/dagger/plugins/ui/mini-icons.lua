@@ -11,7 +11,19 @@ return {
 			return package.loaded["nvim-web-devicons"]
 		end
 	end,
-	--config = function()
-	--	require("mini.icons").setup({ style = "ascii" })
-	--end,
+	config = function()
+		require("mini.icons").setup({
+			filetype = {
+				json = { glyph = "" },
+				jsonc = { glyph = "" },
+
+				sh = { glyph = "󰐣", hl = "MiniIconsBlue" },
+				zsh = { glyph = "󰐣" },
+				bash = { glyph = "󰐣" },
+			},
+			extension = {
+				conf = { glyph = "󰛸", hl = "MiniIconsBlue" },
+			},
+		})
+	end,
 }

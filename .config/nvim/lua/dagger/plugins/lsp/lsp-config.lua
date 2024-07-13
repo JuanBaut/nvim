@@ -17,10 +17,6 @@ return {
 					vim.keymap.set("n", keys, func, { buffer = event.buf, desc = desc })
 				end
 
-				require("which-key").register({
-					["<leader>l"] = { name = "LSP" },
-				})
-
 				map("<leader>lw", vim.lsp.buf.hover, "Documentation over Word")
 				map("<leader>lc", vim.lsp.buf.code_action, "List Code actions")
 				map("<leader>rn", vim.lsp.buf.rename, "Smart rename")
@@ -100,8 +96,8 @@ return {
 			bind_lsp(server_name, server_config)
 		end
 
-		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-			border = "rounded",
-		})
+		--vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+		--	border = "rounded",
+		--})
 	end,
 }

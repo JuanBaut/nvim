@@ -23,9 +23,9 @@ return {
 		vim.keymap.set("n", "m5", "<cmd>Grapple select index=5<cr>", { desc = "Grapple 5" })
 		vim.keymap.set("n", "m6", "<cmd>Grapple select index=6<cr>", { desc = "Grapple 6" })
 
-		require("which-key").register({
-			["m"] = { name = "Grapple" },
-			["M"] = { name = "Grapple menu" },
+		require("which-key").add({
+			{ "M", group = "Grapple menu" },
+			{ "m", group = "Grapple" },
 		})
 	end,
 }

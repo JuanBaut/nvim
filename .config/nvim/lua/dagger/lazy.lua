@@ -32,17 +32,6 @@ require("lazy").setup({
 	},
 })
 
--- Documenting with which-key
-require("which-key").register({
-	["<leader>f"] = { name = "Filetree" },
-	["<leader>r"] = { name = "Rename" },
-	["<leader>s"] = { name = "Search" },
-	["<leader>m"] = { name = "Format or Linting" },
-	["<leader>t"] = { name = "Tabs" },
-	["<leader>w"] = { name = "Wins" },
-	["<leader>u"] = { name = "Buffers" },
-})
-
 -- Enabling commentstring
 vim.g.skip_ts_context_commentstring_module = true
 
