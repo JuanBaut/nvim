@@ -15,10 +15,13 @@ return {
 		})
 	end,
 	opts = {
-		preset = "modern",
+		preset = "classic",
+		modes = {
+			x = false,
+		},
 		win = {
 			border = "none",
-			padding = { 1, 1 },
+			padding = { 1, 3 },
 		},
 		icons = {
 			rules = false,
