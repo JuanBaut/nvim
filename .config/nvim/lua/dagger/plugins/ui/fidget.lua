@@ -17,9 +17,6 @@ return {
 			notification = {
 				override_vim_notify = true,
 				window = {
-					normal_hl = "StatusLine",
-					align = "bottom",
-					relative = "win",
 					x_padding = 0,
 					y_padding = 0,
 				},
