@@ -15,7 +15,7 @@ return {
 			"n",
 			"<leader>fe",
 			"<cmd>Neotree toggle focus right reveal_force_cwd<cr>",
-			{ desc = "Sidebar with neotree" }
+			{ desc = "File Explorer" }
 		)
 
 		vim.g.loaded_netrw = 1
@@ -54,7 +54,7 @@ return {
 				},
 			},
 
-			popup_border_style = "rounded",
+			popup_border_style = "single",
 			event_handlers = { -- Close neo-tree when opening a file.
 				{
 					event = "file_opened",

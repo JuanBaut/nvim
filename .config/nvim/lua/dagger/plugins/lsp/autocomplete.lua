@@ -41,8 +41,8 @@ return {
 
 		cmp.setup({
 			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
+				completion = cmp.config.window.bordered({ border = "single" }),
+				documentation = cmp.config.window.bordered({ border = "single" }),
 			},
 			snippet = {
 				expand = function(args)
@@ -57,7 +57,7 @@ return {
 				["<c-k>"] = cmp.mapping.scroll_docs(-4),
 				["<c-j>"] = cmp.mapping.scroll_docs(4),
 
-				["<c-y>"] = cmp.mapping.confirm({ select = true }),
+				["<c-y>"] = cmp.mapping.confirm(),
 				["<c-c>"] = cmp.mapping.abort(),
 
 				["<c-Space>"] = cmp.mapping.complete({}),

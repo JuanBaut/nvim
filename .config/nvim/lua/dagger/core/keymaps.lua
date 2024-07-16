@@ -16,9 +16,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "" })
 -- unbinds
 vim.keymap.set({ "c", "i", "t" }, "<c-j>", "<nop>")
 vim.keymap.set({ "c", "i", "t" }, "<c-k>", "<nop>")
-
+vim.keymap.set({ "n", "v", "i" }, "<c-l>", "<nop>")
 vim.keymap.set({ "n", "v" }, "Y", "<nop>")
-vim.keymap.set({ "n", "v", "i" }, "<C-l>", "<nop>")
 vim.keymap.set({ "n", "v" }, "Q", "<nop>")
 
 -- keep cursor centered
@@ -28,9 +27,8 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous result in search /" })
 
 -- next greatest remap ever : asbjornHaland (yanking and pasting)
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
-vim.keymap.set("n", "<leader>p", [[o<esc>"+p]], { desc = "Paste from system clipboard" })
-vim.keymap.set("v", "<leader>p", [["+p]], { desc = "Paste from system clipboard" })
-vim.keymap.set("v", "<leader>d", [["_d]], { desc = "Paste from system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]], { desc = "Paste from system clipboard" })
+vim.keymap.set("v", "<leader>d", [["_d]], { desc = "Delete without yanking" })
 
 -- replace current word
 vim.keymap.set(
@@ -53,7 +51,3 @@ vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current t
 vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
-
--- buffer navigation
-vim.keymap.set("n", "<leader>ur", "<C-o>", { desc = "Previous Buffer" })
-vim.keymap.set("n", "<leader>ux", "<cmd>bdelete<CR>", { desc = "Delete Buffer" })

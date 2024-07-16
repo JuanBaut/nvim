@@ -37,7 +37,7 @@ return {
 			green = highlight("Character", "fg"),
 			blue = highlight("@property", "fg"),
 			yellow = highlight("Function", "fg"),
-			grey = highlight("SignColumn", "fg"),
+			grey = highlight("Comment", "fg"),
 
 			dark = highlight("StatusLineNc", "bg"),
 		}

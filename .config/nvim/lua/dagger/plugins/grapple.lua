@@ -6,7 +6,7 @@ return {
 		grapple.setup({
 			icons = false,
 			win_opts = {
-				border = "rounded",
+				border = "single",
 				width = 0.3,
 				height = 0.2,
 			},

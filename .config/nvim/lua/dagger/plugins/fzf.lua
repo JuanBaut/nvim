@@ -34,6 +34,8 @@ return {
 				["scrollbar"] = { "fg", "FloatBorder" },
 			},
 			winopts = {
+				preview_border = "single",
+				border = "single",
 				height = 0.6,
 				width = 76,
 				row = 0,

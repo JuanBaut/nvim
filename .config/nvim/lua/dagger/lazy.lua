@@ -24,10 +24,10 @@ require("lazy").setup({
 		path = "~/dev/neovim",
 	},
 	ui = {
-		border = "rounded",
+		border = "single",
 		size = {
 			width = 0.95,
-			height = 0.8,
+			height = 0.9,
 		},
 	},
 })
