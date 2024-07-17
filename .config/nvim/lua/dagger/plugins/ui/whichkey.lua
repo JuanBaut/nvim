@@ -38,7 +38,7 @@ return {
 			key = {
 				{ "<BS>", "ret" },
 				{ "<Space>", "spc" },
-				{ "<S-Tab>", "tab" },
+				{ "<S%-Tab>", "stab" },
 			},
 		},
 		icons = {
