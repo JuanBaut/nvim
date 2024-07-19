@@ -17,29 +17,14 @@ end
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
-		local function highlight(name, option)
-			if type(name) ~= "string" or (option ~= "fg" and option ~= "bg") then
-				error("Invalid arguments. Usage: highlight(name: string, option: 'fg' | 'bg')")
-			end
-			local hl = vim.api.nvim_get_hl(0, { name = name })
-			local color = hl[option]
-			if not color then
-				print("No " .. option .. " color found for highlight group: " .. name)
-				return nil
-			end
-			local hex_color = string.format("#%06x", color)
-			return hex_color
-		end
-
 		local colors = {
-			white = highlight("PreProc", "fg"),
-			red = highlight("Constant", "fg"),
-			green = highlight("Character", "fg"),
-			blue = highlight("@property", "fg"),
-			yellow = highlight("Function", "fg"),
-			grey = highlight("Comment", "fg"),
-
-			dark = highlight("StatusLineNc", "bg"),
+			white = Get_hl_hex("PreProc", "fg"),
+			red = Get_hl_hex("Constant", "fg"),
+			green = Get_hl_hex("Character", "fg"),
+			blue = Get_hl_hex("@property", "fg"),
+			yellow = Get_hl_hex("Function", "fg"),
+			grey = Get_hl_hex("Comment", "fg"),
+			dark = Get_hl_hex("StatusLineNc", "bg"),
 		}
 
 		require("lualine").setup({

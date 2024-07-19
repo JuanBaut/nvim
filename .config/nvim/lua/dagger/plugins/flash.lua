@@ -6,11 +6,6 @@ return {
 			backdrop = true,
 			matches = true,
 			priority = 5000,
-			groups = {
-				--match = "something",
-				--current = "something",
-				label = "Folded",
-			},
 		},
 		modes = {
 			char = {

@@ -10,10 +10,25 @@ local function modify_hl(highlight, opts)
 	pcall(vim.api.nvim_set_hl, 0, highlight, new_hl)
 end
 
+function Get_hl_hex(name, option)
+	if type(name) ~= "string" or (option ~= "fg" and option ~= "bg") then
+		error("Invalid arguments. Usage: highlight(name: string, option: 'fg' | 'bg')")
+	end
+	local hl = vim.api.nvim_get_hl(0, { name = name })
+	local color = hl[option]
+	if not color then
+		print("No " .. option .. " color found for highlight group: " .. name)
+		return nil
+	end
+	local hex_color = string.format("#%06x", color)
+	return hex_color
+end
+
 vim.api.nvim_create_autocmd({ "ColorScheme" }, {
 	group = vim.api.nvim_create_augroup("Color", {}),
 	pattern = "*",
 	callback = function()
+		modify_hl("FlashLabel", { bg = Get_hl_hex("PreProc", "fg"), fg = Get_hl_hex("FloatBorder", "bg") })
 		modify_hl("CursorLine", { link = "None" })
 		modify_hl("WinSeparator", { link = "FloatBorder" })
 		modify_hl("DiagnosticUnnecessary", { underline = true })
