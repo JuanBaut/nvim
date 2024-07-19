@@ -7,7 +7,9 @@ return {
 			matches = true,
 			priority = 5000,
 			groups = {
-				backdrop = "Folded",
+				--match = "something",
+				--current = "something",
+				label = "Folded",
 			},
 		},
 		modes = {

@@ -15,6 +15,7 @@ return {
 			{ "<leader>t", group = "Tabs" },
 			{ "<leader>u", group = "Buffers" },
 			{ "<leader>w", group = "Wins" },
+			{ "<leader>h", group = "Git Diff" },
 		})
 	end,
 	opts = {
