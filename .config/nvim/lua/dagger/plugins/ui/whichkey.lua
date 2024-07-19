@@ -2,7 +2,6 @@ return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
 	init = function()
-		-- Documenting with which-key
 		require("which-key").add({
 			{ "<BS>", mode = "v", desc = "Decrement node" },
 			{ "<S-Tab>", mode = { "v", "n" }, desc = "Increment node" },

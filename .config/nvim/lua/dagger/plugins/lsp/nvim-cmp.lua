@@ -99,7 +99,7 @@ return {
 				{ name = "path" },
 			},
 
-			-- configure lspkind for vs-code like pictograms in completion menu
+			-- configure lspkind for vs-code like pictograms in completion menu and also nvim-highlight-colors
 			formatting = {
 				fields = { "abbr", "kind", "menu" },
 				format = function(entry, item)

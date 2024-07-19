@@ -5,9 +5,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
-		local mason = require("mason")
-
-		mason.setup({
+		require("mason").setup({
 			ui = {
 				width = 0.95,
 				height = 0.9,
