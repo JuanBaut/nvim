@@ -20,9 +20,13 @@ return {
 				sh = { glyph = "󰐣", hl = "MiniIconsBlue" },
 				zsh = { glyph = "󰐣" },
 				bash = { glyph = "󰐣" },
+
+				gomod = { glyph = "" },
 			},
 			extension = {
 				conf = { glyph = "󰛸", hl = "MiniIconsBlue" },
+
+				go = { glyph = "" },
 			},
 		})
 	end,

@@ -37,6 +37,7 @@ return {
 
 		local servers = {
 			zls = {},
+			gopls = {},
 			nil_ls = {},
 			pyright = {},
 			emmet_ls = {},
@@ -75,7 +76,6 @@ return {
 				-- capabilities = {},
 			},
 			-- clangd = {},
-			-- gopls = {},
 			-- rust_analyzer = {},
 		}
 

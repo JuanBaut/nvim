@@ -38,6 +38,7 @@ return {
 				"luadoc",
 				"lua",
 				"zig",
+				"go",
 			},
 			incremental_selection = {
 				enable = true,
