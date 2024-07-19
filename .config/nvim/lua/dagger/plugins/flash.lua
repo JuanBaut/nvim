@@ -10,7 +10,7 @@ return {
 				--match = "something",
 				--current = "something",
 				backdrop = "FlashBackdrop",
-				label = "Substitute",
+				--label = "Substitute",
 			},
 		},
 		modes = {

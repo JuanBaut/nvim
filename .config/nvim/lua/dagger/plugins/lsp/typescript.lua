@@ -21,5 +21,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 return {
 	"pmizio/typescript-tools.nvim",
 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	lazy = true,
 	opts = {},
 }

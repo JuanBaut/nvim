@@ -9,8 +9,6 @@ return {
 			select = {
 				enabled = true,
 
-				backend = { "fzf_lua", "fzf", "builtin", "nui" },
-
 				nui = {
 					border = {
 						style = "single",
