@@ -28,10 +28,12 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
 	group = vim.api.nvim_create_augroup("Color", {}),
 	pattern = "*",
 	callback = function()
-		modify_hl("FlashLabel", { bg = Get_hl_hex("PreProc", "fg"), fg = Get_hl_hex("FloatBorder", "bg") })
 		modify_hl("CursorLine", { link = "None" })
 		modify_hl("WinSeparator", { link = "FloatBorder" })
 		modify_hl("DiagnosticUnnecessary", { underline = true })
+
+		modify_hl("FlashLabel", { bg = Get_hl_hex("PreProc", "fg"), fg = Get_hl_hex("FloatBorder", "bg") })
+		modify_hl("FlashBackdrop", { link = "SignColumn" })
 
 		modify_hl("NeoTreeCursorLine", { link = "CursorColumn" })
 		modify_hl("NeoTreeDirectoryIcon", { link = "Function" })
