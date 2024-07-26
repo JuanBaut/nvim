@@ -32,10 +32,10 @@ vim.keymap.set("v", "<leader>d", [["_d]], { desc = "Delete without yanking" })
 
 -- replace current word
 vim.keymap.set(
-	"n",
-	"<leader>rp",
-	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-	{ desc = "Replace current word" }
+  "n",
+  "<leader>rp",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  { desc = "Replace current word" }
 )
 
 -- window management

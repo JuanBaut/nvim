@@ -1,24 +1,24 @@
 return {
-	"stevearc/dressing.nvim",
-	event = "VeryLazy",
-	config = function()
-		require("dressing").setup({
-			input = {
-				border = "single",
-			},
-			select = {
-				enabled = true,
+  "stevearc/dressing.nvim",
+  event = "VeryLazy",
+  config = function()
+    require("dressing").setup({
+      input = {
+        border = "single",
+      },
+      select = {
+        enabled = true,
 
-				nui = {
-					border = {
-						style = "single",
-					},
-				},
+        nui = {
+          border = {
+            style = "single",
+          },
+        },
 
-				builtin = {
-					border = "single",
-				},
-			},
-		})
-	end,
+        builtin = {
+          border = "single",
+        },
+      },
+    })
+  end,
 }

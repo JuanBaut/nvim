@@ -1,54 +1,54 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	event = { "BufReadPre", "BufNewFile" },
-	build = ":TSUpdate",
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter-textobjects",
-	},
-	config = function()
-		local treesitter = require("nvim-treesitter.configs")
+  "nvim-treesitter/nvim-treesitter",
+  event = { "BufReadPre", "BufNewFile" },
+  build = ":TSUpdate",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+  },
+  config = function()
+    local treesitter = require("nvim-treesitter.configs")
 
-		treesitter.setup({
-			highlight = {
-				enable = true,
-			},
-			indent = { enable = true },
-			ensure_installed = {
-				"jsonc",
-				"json",
-				"javascript",
-				"typescript",
-				"tsx",
-				"html",
-				"css",
-				"svelte",
+    treesitter.setup({
+      highlight = {
+        enable = true,
+      },
+      indent = { enable = true },
+      ensure_installed = {
+        "jsonc",
+        "json",
+        "javascript",
+        "typescript",
+        "tsx",
+        "html",
+        "css",
+        "svelte",
 
-				"gitignore",
-				"query",
+        "gitignore",
+        "query",
 
-				"markdown",
-				"markdown_inline",
+        "markdown",
+        "markdown_inline",
 
-				"bash",
-				"python",
+        "bash",
+        "python",
 
-				"vim",
-				"vimdoc",
+        "vim",
+        "vimdoc",
 
-				"luadoc",
-				"lua",
-				"zig",
-				"go",
-			},
-			incremental_selection = {
-				enable = true,
-				keymaps = {
-					init_selection = "<S-TAB>",
-					node_incremental = "<S-TAB>",
-					scope_incremental = false,
-					node_decremental = "<bs>",
-				},
-			},
-		})
-	end,
+        "luadoc",
+        "lua",
+        "zig",
+        "go",
+      },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<S-TAB>",
+          node_incremental = "<S-TAB>",
+          scope_incremental = false,
+          node_decremental = "<bs>",
+        },
+      },
+    })
+  end,
 }
