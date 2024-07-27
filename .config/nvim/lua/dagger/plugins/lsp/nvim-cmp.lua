@@ -41,8 +41,14 @@ return {
 
     cmp.setup({
       window = {
-        completion = cmp.config.window.bordered({ border = "single" }),
-        documentation = cmp.config.window.bordered({ border = "single" }),
+        completion = cmp.config.window.bordered({
+          border = "single",
+          winhighlight = "Normal:BetterCmpWindow,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+        }),
+        documentation = cmp.config.window.bordered({
+          border = "single",
+          winhighlight = "Normal:BetterCmpWindow,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+        }),
       },
       snippet = {
         expand = function(args)
@@ -99,10 +105,19 @@ return {
         { name = "path" },
       },
 
-      -- configure lspkind for vs-code like pictograms in completion menu and also nvim-highlight-colors
+      --configure lspkind for vs-code like pictograms in completion menu and also nvim-highlight-colors
       formatting = {
         fields = { "abbr", "kind", "menu" },
         format = function(entry, item)
+          lspkind.init({
+            preset = "codicons",
+            symbol_map = {
+              Text = "󰦨",
+              Variable = "󰫧",
+              Snippet = "",
+            },
+          })
+
           local color = require("nvim-highlight-colors").format(entry, { kind = item.kind })
           local new_item = lspkind.cmp_format({
             mode = "symbol",

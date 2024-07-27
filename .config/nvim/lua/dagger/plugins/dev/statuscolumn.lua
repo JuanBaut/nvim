@@ -1,5 +1,6 @@
 return {
-  dir = "~/dev/neovim/statuscolumn.nvim",
+  --dir = "~/dev/neovim/statuscolumn.nvim",
+  "JuanBaut/statuscolumn.nvim",
   event = { "BufReadPre", "BufNewFile" },
   enabled = true,
   lazy = false,

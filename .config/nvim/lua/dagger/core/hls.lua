@@ -16,9 +16,11 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
   group = vim.api.nvim_create_augroup("Color", {}),
   pattern = "*",
   callback = function()
-    vim.api.nvim_set_hl(0, "WinSeparator", { link = "FloatBorder" })
-    vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { underline = true })
-    --vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = Get_hl_hex("Normal", "bg") })
+    vim.api.nvim_set_hl(
+      0,
+      "BetterCmpWindow",
+      { fg = Get_hl_hex("Normal", "fg"), bg = Get_hl_hex("FloatBorder", "bg") }
+    )
 
     vim.api.nvim_set_hl(
       0,
@@ -36,5 +38,9 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
     vim.api.nvim_set_hl(0, "NeoTreeGitUntracked", { link = "Added" })
     vim.api.nvim_set_hl(0, "NeoTreeGitRenamed", { link = "Added" })
     vim.api.nvim_set_hl(0, "NeoTreeGitConflict", { link = "Removed" })
+
+    vim.api.nvim_set_hl(0, "WinSeparator", { link = "FloatBorder" })
+    vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { underline = true })
+    --vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = Get_hl_hex("Normal", "bg") })
   end,
 })
