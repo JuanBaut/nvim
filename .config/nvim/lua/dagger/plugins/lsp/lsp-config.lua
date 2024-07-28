@@ -39,7 +39,7 @@ return {
       zls = {},
       gopls = {},
       nil_ls = {},
-      pyright = {},
+      basedpyright = {},
       ruff_lsp = {},
       emmet_ls = {},
       html = {},
