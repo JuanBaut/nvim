@@ -7,7 +7,7 @@ return {
 
     lint.linters_by_ft = {
       sh = { "shellcheck" },
-      python = { "ruff", "mypy" },
+      python = { "mypy" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

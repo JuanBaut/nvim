@@ -40,6 +40,7 @@ return {
       gopls = {},
       nil_ls = {},
       pyright = {},
+      ruff_lsp = {},
       emmet_ls = {},
       html = {},
       jsonls = {},
