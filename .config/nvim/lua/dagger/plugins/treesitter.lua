@@ -29,6 +29,10 @@ return {
         "markdown",
         "markdown_inline",
 
+        "dockerfile",
+        "yaml",
+        "toml",
+
         "bash",
         "python",
 
