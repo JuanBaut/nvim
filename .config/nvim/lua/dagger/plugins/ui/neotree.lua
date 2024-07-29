@@ -70,6 +70,7 @@ return {
           never_show = {
             ".DS_Store",
             ".git",
+            "__pycache__",
           },
         },
         bind_to_cwd = true, -- true creates a 2-way binding between vim's cwd and neo-tree's root
