@@ -74,6 +74,7 @@ return {
         lualine_a = {
           {
             "filename",
+            path = 1,
             symbols = {
               modified = " ",
               readonly = " ",
