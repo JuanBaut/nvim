@@ -13,6 +13,9 @@ return {
   end,
   config = function()
     require("mini.icons").setup({
+      file = {
+        ["LICENSE"] = { glyph = "󰿃" },
+      },
       filetype = {
         json = { glyph = "" },
         jsonc = { glyph = "" },
@@ -22,10 +25,10 @@ return {
         bash = { glyph = "󰐣" },
 
         gomod = { glyph = "" },
+        gosum = { glyph = "" },
       },
       extension = {
         conf = { glyph = "󰛸", hl = "MiniIconsBlue" },
-
         go = { glyph = "" },
       },
     })
