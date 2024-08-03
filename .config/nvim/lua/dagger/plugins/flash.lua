@@ -6,6 +6,12 @@ return {
       backdrop = true,
       matches = true,
       priority = 5000,
+      groups = {
+        match = "Conceal",
+        current = "Comment",
+        --backdrop = "FlashBackdrop",
+        label = "PreProc",
+      },
     },
     modes = {
       char = {

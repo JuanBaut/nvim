@@ -22,15 +22,6 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
       { fg = Get_hl_hex("Normal", "fg"), bg = Get_hl_hex("FloatBorder", "bg") }
     )
 
-    vim.api.nvim_set_hl(
-      0,
-      "FlashLabel",
-      { bg = Get_hl_hex("PreProc", "fg"), fg = Get_hl_hex("NormalFloat", "bg") }
-    )
-    vim.api.nvim_set_hl(0, "FlashBackdrop", { link = "SignColumn" })
-
-    --vim.api.nvim_set_hl(0, "CursorLine", { link = "None" })
-    --vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { link = "CursorColumn" })
     vim.api.nvim_set_hl(0, "NeoTreeDirectoryIcon", { link = "Function" })
     vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", { link = "Function" })
     vim.api.nvim_set_hl(0, "NeoTreeGitUnstaged", { link = "Changed" })
