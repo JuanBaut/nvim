@@ -1,5 +1,6 @@
 return {
-  dir = "~/dev/neovim/lackluster.nvim",
+  --dir = "~/dev/neovim/lackluster.nvim",
+  "slugbyte/lackluster.nvim",
   enabled = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -11,8 +12,7 @@ return {
     local lackluster = require("lackluster")
 
     lackluster.setup({
-      -- ('default' is default) ('#ffaaff' is a custom colorcode)
-      tweak_pallet = {
+      tweak_color = {
         lack = "#c3e88d", -- works in lualine
         luster = "#b4f9f8 ", -- doesnt work in syntax
         orange = "default",
