@@ -40,7 +40,7 @@ return {
       gopls = {},
       nil_ls = {},
       basedpyright = {},
-      ruff_lsp = {},
+      ruff = {},
       emmet_ls = {},
       html = {},
       jsonls = {},
