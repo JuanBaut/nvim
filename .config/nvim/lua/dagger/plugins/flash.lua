@@ -7,10 +7,10 @@ return {
       matches = true,
       priority = 5000,
       groups = {
-        match = "Conceal",
-        current = "Comment",
+        current = "PreProcBased",
+        match = "FunctionBased",
+        label = "ConstantBased",
         --backdrop = "FlashBackdrop",
-        label = "PreProc",
       },
     },
     modes = {
