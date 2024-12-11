@@ -7,9 +7,9 @@ return {
       matches = true,
       priority = 5000,
       groups = {
-        current = "PreProcBased",
-        match = "FunctionBased",
-        label = "ConstantBased",
+        current = "PreProc",
+        match = "Function",
+        label = "Constant",
         --backdrop = "FlashBackdrop",
       },
     },
