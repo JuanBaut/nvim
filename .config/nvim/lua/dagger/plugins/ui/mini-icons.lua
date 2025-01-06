@@ -15,7 +15,7 @@ return {
     require("mini.icons").setup({
       file = {
         ["LICENSE"] = { glyph = "󰿃" },
-        ["README.md"] = { glyph = "" },
+        --["README.md"] = { glyph = "" },
       },
       filetype = {
         json = { glyph = "" },
