@@ -14,7 +14,7 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 -- least amount of lines while scrolling is 10
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 999
 vim.opt.signcolumn = "yes"
 
 -- fast update
