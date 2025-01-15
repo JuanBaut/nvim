@@ -6,12 +6,13 @@ local lint_progress = function()
   return " " .. table.concat(linters, ", ")
 end
 
-local grapple = function()
-  local is_marked = package.loaded["grapple"] and require("grapple").exists()
-  if is_marked == false then
+local harpoon = function()
+  local item, index = require("harpoon"):list():get_by_value(vim.fn.bufname("%"))
+  if item then
+    return index .. " "
+  else
     return ""
   end
-  return "󰛢 " .. require("grapple").name_or_index()
 end
 
 return {
@@ -28,7 +29,40 @@ return {
     }
 
     require("lualine").setup({
+      sections = {
+        lualine_a = {
+          {
+            "filename",
+            path = 0,
+            symbols = {
+              modified = "",
+              readonly = "",
+              unnamed = "No name",
+              newfile = "New file",
+            },
+          },
+          { "branch", icon = { "", align = "right" } },
+          harpoon,
+        },
+        lualine_b = {},
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {
+          lint_progress,
+          { "diff", symbols = { added = "+", modified = "~", removed = "-" } },
+          "progress",
+          { "filetype", colored = false, icon = { align = "right" } },
+        },
+      },
+
       options = {
+        icons_enabled = true,
+        globalstatus = true,
+        disabled_filetypes = { "alpha" },
+        component_separators = { left = "›", right = "‹" },
+        section_separators = { left = "›", right = "‹" },
+
         theme = {
           normal = {
             a = { bg = colors.dark, fg = colors.white, gui = "bold" },
@@ -61,43 +95,8 @@ return {
             c = { bg = colors.dark, fg = colors.gray },
           },
         },
-        icons_enabled = true,
-        globalstatus = true,
-        disabled_filetypes = {
-          "alpha",
-        },
+      },
 
-        component_separators = { left = "─", right = "─" },
-        section_separators = { left = "─", right = "─" },
-      },
-      sections = {
-        lualine_a = {
-          {
-            "filename",
-            path = 1,
-            symbols = {
-              modified = " ",
-              readonly = " ",
-              unnamed = "No name",
-              newfile = "New file",
-            },
-          },
-        },
-        lualine_b = {
-          { "branch", icon = { " ", align = "right" } },
-          grapple,
-        },
-        lualine_c = { lint_progress },
-        lualine_x = {
-          { "diff", symbols = { added = "+", modified = "~", removed = "-" } },
-        },
-        lualine_y = {
-          "progress",
-        },
-        lualine_z = {
-          { "filetype", colored = false, icon = { align = "right" } },
-        },
-      },
       extensions = {
         "nvim-tree",
         "neo-tree",
