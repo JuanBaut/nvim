@@ -8,7 +8,7 @@ end
 
 local harpoon = function()
   local item, index = require("harpoon"):list():get_by_value(vim.fn.bufname("%"))
-  if item then
+  if item and package.loaded["harpoon"] then
     return index .. " "
   else
     return ""
