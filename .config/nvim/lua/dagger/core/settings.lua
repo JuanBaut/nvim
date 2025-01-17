@@ -1,5 +1,12 @@
 vim.loader.enable()
 
+-- remove eof character
+vim.opt.fillchars = { eob = " " }
+
+-- indent symbols
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = "· ", trail = " ", nbsp = "␣" }
+
 -- Save undo history
 vim.opt.undofile = true
 
@@ -31,13 +38,10 @@ vim.opt.autoindent = true
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
--- indent symbols
--- vim.opt.list = true
--- vim.opt.listchars = { tab = "· ", trail = " ", nbsp = "␣" }
-
 -- Enable break indent
 vim.opt.breakindent = true
 
+-- Split direction
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 

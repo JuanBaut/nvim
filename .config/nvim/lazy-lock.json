@@ -1,7 +1,6 @@
 {
   "LuaSnip": { "branch": "master", "commit": "c9b9a22904c97d0eb69ccb9bab76037838326817" },
   "alpha-nvim": { "branch": "main", "commit": "de72250e054e5e691b9736ee30db72c65d560771" },
-  "auto-indent.nvim": { "branch": "main", "commit": "46801cf8857d42a20a73c40b0a5d3dfe8b2b6192" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "99290b3ec1322070bcfb9e846450a46f6efa50f0" },
@@ -16,7 +15,9 @@
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
   "fzf-lua": { "branch": "main", "commit": "047f6862bb0c9710c06e5432d7ad50da9ea00e46" },
   "gitsigns.nvim": { "branch": "main", "commit": "0797734e2bf229cc67b05e82a17e22a18f191913" },
+  "guess-indent.nvim": { "branch": "main", "commit": "6cd61f7a600bb756e558627cd2e740302c58e32d" },
   "harpoon": { "branch": "harpoon2", "commit": "a84ab829eaf3678b586609888ef52f7779102263" },
+  "hlchunk.nvim": { "branch": "main", "commit": "5465dd33ade8676d63f6e8493252283060cd72ca" },
   "image.nvim": { "branch": "master", "commit": "f1163cc2f6fff5b0de7c23c7502eee0df23a3e0e" },
   "lazy.nvim": { "branch": "main", "commit": "d8f26efd456190241afd1b0f5235fe6fdba13d4a" },
   "lspkind.nvim": { "branch": "master", "commit": "d79a1c3299ad0ef94e255d045bed9fa26025dab6" },

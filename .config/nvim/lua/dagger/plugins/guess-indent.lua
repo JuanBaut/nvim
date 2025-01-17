@@ -1,5 +1,5 @@
 return {
-  "vidocqh/auto-indent.nvim",
+  "NMAC427/guess-indent.nvim",
   event = { "BufReadPre", "BufNewFile" },
   opts = {},
 }

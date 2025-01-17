@@ -1,6 +1,5 @@
 return {
   "JoosepAlviste/nvim-ts-context-commentstring",
-  lazy = true,
-  event = "VeryLazy",
+  event = { "BufReadPre", "BufNewFile" },
   name = "commentstring.nvim",
 }

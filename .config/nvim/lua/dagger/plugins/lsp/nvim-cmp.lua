@@ -1,5 +1,6 @@
 return {
   "hrsh7th/nvim-cmp",
+  event = { "BufReadPre", "BufNewFile", "CmdLineEnter" },
   dependencies = {
     {
       "L3MON4D3/LuaSnip",

@@ -1,7 +1,6 @@
 return {
   "numToStr/Comment.nvim",
-  lazy = true,
-  event = "VeryLazy",
+  event = { "BufReadPre", "BufNewFile" },
   name = "comment.nvim",
   opts = {
     padding = false,

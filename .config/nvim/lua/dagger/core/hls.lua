@@ -32,6 +32,5 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
 
     vim.api.nvim_set_hl(0, "WinSeparator", { link = "FloatBorder" })
     vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { underline = true })
-    --vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = Get_hl_hex("Normal", "bg") })
   end,
 })

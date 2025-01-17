@@ -1,5 +1,6 @@
 return {
   "antosha417/nvim-lsp-file-operations",
+  event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-neo-tree/neo-tree.nvim",
