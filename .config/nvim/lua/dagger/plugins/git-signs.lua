@@ -39,7 +39,6 @@ return {
     end, { desc = "Reset selection" })
 
     map("n", "<leader>hS", gitsigns.stage_buffer, { desc = "Stage Buffer" })
-    map("n", "<leader>hu", gitsigns.undo_stage_hunk, { desc = "Undo Stage Hunk" })
     map("n", "<leader>hR", gitsigns.reset_buffer, { desc = "Reset Buffer" })
     map("n", "<leader>hp", gitsigns.preview_hunk, { desc = "Preview Hunk" })
 
@@ -53,7 +52,7 @@ return {
       gitsigns.diffthis("~")
     end, { desc = "Show Complete Diff" })
 
-    map("n", "<leader>hx", gitsigns.toggle_deleted, { desc = "Toggle Deleted" })
+    map("n", "<leader>hx", gitsigns.preview_hunk_inline, { desc = "Toggle Deleted" })
 
     -- Text object
     map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", { desc = "Select Hunk" })

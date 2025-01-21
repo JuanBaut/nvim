@@ -1,6 +1,7 @@
 return {
   "folke/snacks.nvim",
-  enabled = false,
+  event = { "BufReadPre", "BufNewFile" },
+  enabled = true,
   opts = {
     indent = {
       indent = {
