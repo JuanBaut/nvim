@@ -17,7 +17,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "" })
 vim.keymap.set({ "c", "i", "t" }, "<c-j>", "<nop>")
 vim.keymap.set({ "c", "i", "t" }, "<c-k>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<c-l>", "<nop>")
-vim.keymap.set({ "n", "v" }, "Y", "<nop>")
+-- vim.keymap.set({ "n", "v" }, "Y", "<nop>")
 vim.keymap.set({ "n", "v" }, "Q", "<nop>")
 
 -- keep cursor centered
