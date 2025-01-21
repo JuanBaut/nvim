@@ -7,12 +7,20 @@ local lint_progress = function()
 end
 
 local harpoon = function()
-  local item, index = require("harpoon"):list():get_by_value(vim.fn.bufname("%"))
-  if item and package.loaded["harpoon"] then
-    return index .. " "
-  else
-    return ""
+  local mark = ""
+  if package.loaded["harpoon"] then
+    local current_file = vim.fn.expand("%:p")
+
+    for id, item in ipairs(require("harpoon"):list().items) do
+      local item_file = vim.fn.fnamemodify(item.value, ":p")
+
+      if item_file == current_file then
+        mark = id .. " "
+        break
+      end
+    end
   end
+  return mark
 end
 
 return {
@@ -36,7 +44,7 @@ return {
             path = 0,
             symbols = {
               modified = "",
-              readonly = "",
+              readonly = " ",
               unnamed = "No name",
               newfile = "New file",
             },
