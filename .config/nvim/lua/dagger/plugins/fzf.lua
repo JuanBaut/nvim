@@ -34,13 +34,13 @@ return {
         ["scrollbar"] = { "fg", "WinSeparator" },
       },
       winopts = {
-        preview_border = "single",
         border = "single",
         height = 0.6,
         width = 76,
         row = 0,
         col = 0.5,
         preview = {
+          border = "single",
           layout = "vertical",
           vertical = "up:44%",
           scrollbar = false,
@@ -54,6 +54,9 @@ return {
         if type == "" then
           require("fzf-lua").builtin({
             winopts = {
+              preview = {
+                border = "single",
+              },
               height = 0.2,
               width = 40,
               row = 0.4,
