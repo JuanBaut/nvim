@@ -3,8 +3,8 @@ return {
   event = "VeryLazy",
   init = function()
     require("which-key").add({
-      { "<BS>", mode = "v", desc = "Decrement node" },
-      { "<S-Tab>", mode = { "v", "n" }, desc = "Increment node" },
+      { "ma", mode = "n", desc = "Harpoon add" },
+      { "M", mode = "n", desc = "Harpoon menu" },
       { "S", mode = "v", desc = "Add surround visual" },
       { "<leader>l", group = "LSP" },
       { "<leader>n", group = "Notifications" },

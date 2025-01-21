@@ -25,11 +25,4 @@ return {
       end)
     end
   end,
-
-  init = function()
-    require("which-key").add({
-      { "M", group = "Harpoon menu" },
-      { "m", group = "Harpoon" },
-    })
-  end,
 }

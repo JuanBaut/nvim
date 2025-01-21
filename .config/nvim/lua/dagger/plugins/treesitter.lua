@@ -2,9 +2,9 @@ return {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
-  dependencies = {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-  },
+  --dependencies = {
+  --  "nvim-treesitter/nvim-treesitter-textobjects",
+  --},
   config = function()
     local treesitter = require("nvim-treesitter.configs")
 
@@ -43,15 +43,6 @@ return {
         "lua",
         "zig",
         "go",
-      },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<S-TAB>",
-          node_incremental = "<S-TAB>",
-          scope_incremental = false,
-          node_decremental = "<bs>",
-        },
       },
     })
   end,
