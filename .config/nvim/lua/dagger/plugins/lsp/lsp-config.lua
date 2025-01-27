@@ -36,11 +36,27 @@ return {
     end
 
     local servers = {
+      -- zig, go and nix
       zls = {},
       gopls = {},
       nil_ls = {},
-      basedpyright = {},
+
+      -- python
       ruff = {},
+      basedpyright = {
+        settings = {
+          pyright = {
+            disableOrganizeImports = true,
+          },
+          python = {
+            analysis = {
+              ignore = { "*" },
+            },
+          },
+        },
+      },
+
+      -- html, json, css
       emmet_ls = {},
       html = {},
       jsonls = {},
@@ -69,6 +85,8 @@ return {
           },
         },
       },
+
+      -- lua
       lua_ls = {
         settings = {
           Lua = {
