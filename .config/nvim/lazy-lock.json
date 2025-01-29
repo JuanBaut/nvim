@@ -40,7 +40,6 @@
   "nvim-treesitter": { "branch": "master", "commit": "80c7af6d0408411ff1f502fbac8ca94b738b8762" },
   "nvim-ts-autotag": { "branch": "main", "commit": "1cca23c9da708047922d3895a71032bc0449c52d" },
   "plenary.nvim": { "branch": "master", "commit": "3707cdb1e43f5cea73afb6037e6494e7ce847a66" },
-  "snacks.nvim": { "branch": "main", "commit": "438a9fd498dd38552e70535b0bf2e6928fcb6dc6" },
   "statuscolumn.nvim": { "branch": "main", "commit": "5e821339e26de3c59745eaebfd4565d988a0b92a" },
   "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "a54b84384e208fb5eb83b14e25bb631179ac229e" },
   "tokyonight.nvim": { "branch": "main", "commit": "7db876296396de3a1f7cab8318c43b7e0448625c" },

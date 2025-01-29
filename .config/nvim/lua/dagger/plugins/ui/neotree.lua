@@ -3,7 +3,6 @@ return {
   branch = "v3.x",
   event = "VeryLazy",
   dependencies = {
-    "nvim-tree/nvim-web-devicons",
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     "3rd/image.nvim",
