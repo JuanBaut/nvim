@@ -1,4 +1,5 @@
 vim.loader.enable()
+vim.opt.mouse = ""
 
 -- remove eof character
 vim.opt.fillchars = { eob = " " }

@@ -4,12 +4,15 @@ return {
     local fzf = require("fzf-lua")
     require("fzf-lua").setup({
       hls = {
-        border = "WinSeparator",
-        preview_border = "WinSeparator",
+        border = "WinBorder",
+        preview_border = "WinBorder",
         header_text = "Comment",
         header_bind = "Comment",
       },
       actions = {
+        live_grep = {
+          ["ctrl-h"] = fzf.actions.toggle_hidden,
+        },
         files = {
           ["default"] = fzf.actions.file_edit,
           ["ctrl-v"] = fzf.actions.file_split,
@@ -24,14 +27,14 @@ return {
         ["fg+"] = { "fg", "Normal" },
         ["hl"] = { "fg", "Special" },
         ["hl+"] = { "fg", "Special" },
-        ["info"] = { "fg", "PreProc" },
+        ["info"] = { "fg", "Special" },
         ["prompt"] = { "fg", "Comment" },
         ["pointer"] = { "fg", "Special" },
         ["marker"] = { "fg", "Keyword" },
         ["spinner"] = { "fg", "Label" },
         ["header"] = { "fg", "Comment" },
-        ["separator"] = { "fg", "WinSeparator" },
-        ["scrollbar"] = { "fg", "WinSeparator" },
+        ["separator"] = { "fg", "WinBorder" },
+        ["scrollbar"] = { "fg", "WinBorder" },
       },
       winopts = {
         border = "single",

@@ -44,11 +44,11 @@ return {
       window = {
         completion = cmp.config.window.bordered({
           border = "single",
-          winhighlight = "Normal:BetterCmpWindow,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+          winhighlight = "Normal:NormalFloat,FloatBorder:WinBorder,CursorLine:Visual,Search:None",
         }),
         documentation = cmp.config.window.bordered({
           border = "single",
-          winhighlight = "Normal:BetterCmpWindow,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+          winhighlight = "Normal:NormalFloat,FloatBorder:WinBorder,CursorLine:Visual,Search:None",
         }),
       },
       snippet = {

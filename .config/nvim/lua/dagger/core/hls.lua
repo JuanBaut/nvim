@@ -12,15 +12,18 @@ function Get_hl_hex(name, option)
   return hex_color
 end
 
-vim.api.nvim_create_autocmd({ "VimEnter" }, {
+vim.api.nvim_create_autocmd({ "ColorScheme", "VimEnter" }, {
   group = vim.api.nvim_create_augroup("Color", {}),
   pattern = "*",
   callback = function()
     vim.api.nvim_set_hl(
       0,
-      "BetterCmpWindow",
-      { fg = Get_hl_hex("Normal", "fg"), bg = Get_hl_hex("FloatBorder", "bg") }
+      "WinBorder",
+      { bg = Get_hl_hex("NormalFloat", "bg"), fg = Get_hl_hex("Comment", "fg") }
     )
+    vim.api.nvim_set_hl(0, "WinSeparator", { link = "WinBorder" })
+    vim.api.nvim_set_hl(0, "FloatBorder", { link = "WinBorder" })
+    vim.api.nvim_set_hl(0, "FloatTitle", { link = "WinBorder" })
 
     vim.api.nvim_set_hl(0, "NeoTreeDirectoryIcon", { link = "Function" })
     vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", { link = "Function" })
@@ -29,8 +32,8 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
     vim.api.nvim_set_hl(0, "NeoTreeGitUntracked", { link = "Added" })
     vim.api.nvim_set_hl(0, "NeoTreeGitRenamed", { link = "Added" })
     vim.api.nvim_set_hl(0, "NeoTreeGitConflict", { link = "Removed" })
+    vim.api.nvim_set_hl(0, "NeoTreeFloatBorder", { link = "WinBorder" })
 
-    vim.api.nvim_set_hl(0, "WinSeparator", { link = "FloatBorder" })
     vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { underline = true })
   end,
 })

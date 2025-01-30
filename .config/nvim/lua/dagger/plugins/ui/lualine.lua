@@ -27,7 +27,7 @@ return {
   "nvim-lualine/lualine.nvim",
   config = function()
     local colors = {
-      white = Get_hl_hex("PreProc", "fg"),
+      white = Get_hl_hex("Statement", "fg"),
       red = Get_hl_hex("Constant", "fg"),
       green = Get_hl_hex("Character", "fg"),
       blue = Get_hl_hex("Function", "fg"),
