@@ -2,10 +2,9 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
+    "saghen/blink.cmp",
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "j-hui/fidget.nvim", opts = {} },
-    { "folke/neodev.nvim", opts = {} },
   },
 
   config = function()
@@ -106,21 +105,9 @@ return {
       -- rust_analyzer = {},
     }
 
-    local function bind_lsp(server_name, server_config)
-      local capabilities = vim.lsp.protocol.make_client_capabilities()
-      server_config.capabilities = vim.tbl_deep_extend(
-        "force",
-        {},
-        capabilities,
-        require("cmp_nvim_lsp").default_capabilities(),
-        server_config.capabilities or {}
-      )
-      require("lspconfig")[server_name].setup(server_config)
-    end
-
-    -- Automatically set up all language servers defined in the `servers` table
-    for server_name, server_config in pairs(servers) do
-      bind_lsp(server_name, server_config)
+    for server, config in pairs(servers) do
+      config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+      require("lspconfig")[server].setup(config)
     end
 
     --vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
