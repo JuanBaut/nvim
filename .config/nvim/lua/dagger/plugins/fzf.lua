@@ -37,13 +37,13 @@ return {
         ["scrollbar"] = { "fg", "WinBorder" },
       },
       winopts = {
-        border = "single",
+        border = { "├", "─", "┤", "│", "┘", "─", "└", "│" },
         height = 0.6,
         width = 76,
         row = 0,
         col = 0.5,
         preview = {
-          border = "single",
+          border = { "┌", "─", "┐", "│", "", "", "", "│" },
           layout = "vertical",
           vertical = "up:44%",
           scrollbar = false,
@@ -57,6 +57,7 @@ return {
         if type == "" then
           require("fzf-lua").builtin({
             winopts = {
+              border = "single",
               preview = {
                 border = "single",
               },
