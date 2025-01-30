@@ -10,14 +10,17 @@ return {
         header_bind = "Comment",
       },
       actions = {
-        live_grep = {
-          ["ctrl-h"] = fzf.actions.toggle_hidden,
-        },
         files = {
-          ["default"] = fzf.actions.file_edit,
-          ["ctrl-v"] = fzf.actions.file_split,
-          ["ctrl-s"] = fzf.actions.file_vsplit,
-          ["alt-q"] = fzf.actions.file_sel_to_qf,
+          true,
+          ["enter"] = fzf.file_edit_or_qf,
+          ["ctrl-s"] = fzf.file_split,
+          ["ctrl-v"] = fzf.file_vsplit,
+          ["ctrl-t"] = fzf.file_tabedit,
+          ["alt-q"] = fzf.file_sel_to_qf,
+          ["alt-Q"] = fzf.file_sel_to_ll,
+          ["alt-i"] = fzf.toggle_ignore,
+          ["alt-h"] = fzf.toggle_hidden,
+          ["alt-f"] = fzf.toggle_follow,
         },
       },
       fzf_colors = {
@@ -82,16 +85,16 @@ return {
     map("<leader>sf", "files", "Files")
     map("<leader>sh", "help_tags", "Help")
     map("<leader>sb", "buffers", "Buffers")
-    map("<leader>sg", "live_grep", "Grep Word")
-    map("<leader>sv", "grep_visual", "Grep Visual")
     map("<leader>sr", "oldfiles", "Recent files")
+    map("<leader>sv", "grep_visual", "Grep Visual")
     map("<leader>sc", "grep_cword", "Current Word")
+    map("<leader>sg", "live_grep_native", "Grep Word")
     map("<leader>sd", "diagnostics_document", "Diagnostics")
 
     --lsp
     map("<leader>lr", "lsp_references", "LSP References")
     map("<leader>ld", "lsp_definitions", "LSP Definitions")
-    map("<leader>lI", "lsp_implementations", "LSP Implementations")
     map("<leader>lt", "lsp_typedefs", "LSP Type Definitions")
+    map("<leader>lI", "lsp_implementations", "LSP Implementations")
   end,
 }
