@@ -58,7 +58,7 @@ return {
       emmet_ls = {},
       html = {},
       jsonls = {},
-      cssmodules_ls = {},
+      --cssmodules_ls = {},
       tailwindcss = {},
       eslint = {},
       cssls = {
