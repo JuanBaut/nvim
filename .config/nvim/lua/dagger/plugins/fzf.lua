@@ -94,6 +94,7 @@ return {
     --lsp
     map("<leader>lr", "lsp_references", "LSP References")
     map("<leader>ld", "lsp_definitions", "LSP Definitions")
+    map("<leader>lc", "lsp_code_actions", "LSP Code Actions")
     map("<leader>lt", "lsp_typedefs", "LSP Type Definitions")
     map("<leader>lI", "lsp_implementations", "LSP Implementations")
   end,

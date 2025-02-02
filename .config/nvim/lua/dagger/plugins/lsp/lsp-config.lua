@@ -16,7 +16,6 @@ return {
           vim.keymap.set("n", keys, func, { buffer = event.buf, desc = desc })
         end
 
-        map("<leader>lc", vim.lsp.buf.code_action, "List Code actions")
         map("<leader>rn", vim.lsp.buf.rename, "Smart rename")
 
         -- Diagnostics
