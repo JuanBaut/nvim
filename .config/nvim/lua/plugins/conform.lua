@@ -4,27 +4,27 @@ return {
   config = function()
     local conform = require("conform")
 
-    conform.formatters.prettierd = {
-      stdin = true,
-      env = {
-        PRETTIERD_LOCAL_PRETTIER_ONLY = true,
-      },
-      args = { vim.api.nvim_buf_get_name(0) },
-    }
+    -- conform.formatters.prettierd = {
+    --   stdin = true,
+    --   env = {
+    --     PRETTIERD_LOCAL_PRETTIER_ONLY = true,
+    --   },
+    --   args = { vim.api.nvim_buf_get_name(0) },
+    -- }
 
     conform.setup({
       formatters_by_ft = {
-        javascript = { "prettierd" },
-        typescript = { "prettierd" },
-        javascriptreact = { "prettierd" },
-        typescriptreact = { "prettierd" },
-        svelte = { "prettierd" },
-        css = { "prettierd" },
-        html = { "prettierd" },
-        json = { "prettierd" },
-        yaml = { "prettierd" },
-        markdown = { "prettierd" },
-        graphql = { "prettierd" },
+        javascript = { "biome" },
+        typescript = { "biome" },
+        javascriptreact = { "biome" },
+        typescriptreact = { "biome" },
+        svelte = { "biome" },
+        css = { "biome" },
+        html = { "biome" },
+        json = { "biome" },
+        yaml = { "biome" },
+        markdown = { "biome" },
+        graphql = { "biome" },
 
         lua = { "stylua" },
         sh = { "beautysh" },

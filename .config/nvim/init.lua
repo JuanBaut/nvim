@@ -1,5 +1,4 @@
-require("dagger.core")
-require("dagger.lazy")
+require("config")
 
 if vim.g.neovide then
   vim.o.guifont = "Input Mono,Symbols Nerd Font Mono:h12"

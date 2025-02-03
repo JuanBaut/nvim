@@ -4,10 +4,6 @@ vim.opt.mouse = ""
 -- remove eof character
 vim.opt.fillchars = { eob = " " }
 
--- indent symbols
--- vim.opt.list = true
--- vim.opt.listchars = { tab = "· ", trail = " ", nbsp = "␣" }
-
 -- Save undo history
 vim.opt.undofile = true
 
@@ -49,12 +45,6 @@ vim.opt.splitbelow = true
 -- line wrapping
 vim.opt.wrap = false
 
--- highlighting on yank
-local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
-vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = "*",
-})
+-- indent symbols
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = "· ", trail = " ", nbsp = "␣" }

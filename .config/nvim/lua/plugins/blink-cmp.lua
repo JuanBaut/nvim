@@ -1,13 +1,14 @@
 return {
   "saghen/blink.cmp",
   --dependencies = "rafamadriz/friendly-snippets",
-
+  event = { "CmdlineEnter", "BufNewFile", "BufReadPre" },
   dependencies = {
     "L3MON4D3/LuaSnip",
     lazy = true,
     dependencies = {
       {
         "rafamadriz/friendly-snippets",
+        lazy = true,
         config = function()
           require("luasnip.loaders.from_vscode").lazy_load()
           require("luasnip.loaders.from_vscode").lazy_load({

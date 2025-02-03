@@ -1,19 +1,18 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
-  enabled = false,
+  -- enabled = false,
   --branch = "v3.x",
   event = "VeryLazy",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
-    "3rd/image.nvim",
   },
 
   config = function()
     local keymap = vim.keymap
     keymap.set(
       "n",
-      "<leader>ff",
+      "<leader>fe",
       "<cmd>Neotree toggle focus right reveal_force_cwd<cr>",
       { desc = "File Explorer" }
     )

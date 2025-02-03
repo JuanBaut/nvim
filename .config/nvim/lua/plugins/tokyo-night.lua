@@ -1,6 +1,6 @@
 return {
   "folke/tokyonight.nvim",
-  --enabled = false,
+  enabled = false,
   lazy = false,
   priority = 1000,
   config = function()
@@ -17,6 +17,6 @@ return {
         colors.bg_statusline = "#131621"
       end,
     })
-    vim.cmd.colorscheme("tokyonight-night")
+    -- vim.cmd.colorscheme("tokyonight-night")
   end,
 }

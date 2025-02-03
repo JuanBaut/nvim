@@ -8,6 +8,7 @@ return {
     harpoon:setup()
 
     local toggle_opts = {
+      title = " Harpoon ",
       title_pos = "center",
       ui_width_ratio = 0.40,
     }
