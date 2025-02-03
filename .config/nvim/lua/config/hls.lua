@@ -24,7 +24,6 @@ vim.api.nvim_create_autocmd({ "ColorScheme", "VimEnter" }, {
     vim.api.nvim_set_hl(0, "WinSeparator", { link = "WinBorder" })
     vim.api.nvim_set_hl(0, "FloatBorder", { link = "WinBorder" })
     vim.api.nvim_set_hl(0, "FloatTitle", { link = "WinBorder" })
-    vim.api.nvim_set_hl(0, "FzfBorders", { fg = Get_hl_hex("Comment", "fg") })
     vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { underline = true })
 
     vim.api.nvim_set_hl(0, "NeoTreeNormal", { link = "NormalFloat" })

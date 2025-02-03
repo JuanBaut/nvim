@@ -4,8 +4,8 @@ return {
     local fzf = require("fzf-lua")
     require("fzf-lua").setup({
       hls = {
-        border = "FzfBorders",
-        preview_border = "FzfBorders",
+        border = "WinBorder",
+        preview_border = "WinBorder",
         header_text = "Comment",
         header_bind = "Comment",
       },

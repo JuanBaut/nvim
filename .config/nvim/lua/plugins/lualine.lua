@@ -60,6 +60,7 @@ return {
           lint_progress,
           { "diff", symbols = { added = "+", modified = "~", removed = "-" } },
           "progress",
+          "location",
           { "filetype", colored = false, icon = { align = "right" } },
         },
       },

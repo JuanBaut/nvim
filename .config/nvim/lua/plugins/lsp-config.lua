@@ -60,6 +60,7 @@ return {
       --cssmodules_ls = {},
       tailwindcss = {},
       eslint = {},
+      biome = {},
       cssls = {
         settings = {
           css = {
