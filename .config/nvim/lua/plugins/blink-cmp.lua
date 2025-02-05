@@ -32,6 +32,28 @@ return {
       sources = {
         default = { "lsp", "snippets", "path", "buffer" },
         providers = {
+          lsp = {
+            transform_items = function(_, items)
+              local col, before_cursor = get_cursor_context()
+              local trigger_pos = before_cursor:find(";[^;]*$")
+
+              if trigger_pos then
+                for _, item in ipairs(items) do
+                  item.textEdit = {
+                    newText = item.insertText or item.label,
+                    range = {
+                      start = { line = vim.fn.line(".") - 1, character = trigger_pos - 1 },
+                      ["end"] = { line = vim.fn.line(".") - 1, character = col },
+                    },
+                  }
+                end
+              end
+
+              return vim.tbl_filter(function(item)
+                return item.kind ~= require("blink.cmp.types").CompletionItemKind.Text
+              end, items)
+            end,
+          },
           snippets = {
             name = "snippets",
             enabled = true,
@@ -47,7 +69,6 @@ return {
               return is_snippet_trigger()
             end,
 
-            -- After accepting the completion, delete ';'
             transform_items = function(_, items)
               local col, before_cursor = get_cursor_context()
               local trigger_pos = before_cursor:find(";[^;]*$")
@@ -108,12 +129,12 @@ return {
           enabled = false,
         },
         menu = {
-          -- draw = {
-          --   columns = {
-          --     { "kind_icon", "label", "label_description", gap = 1 },
-          --     { "source_name" },
-          --   },
-          -- },
+          draw = {
+            columns = {
+              { "kind_icon", "label", "label_description", gap = 1 },
+              { "source_name" },
+            },
+          },
           border = "single",
           winhighlight = "Normal:BlinkCmpMenu,FloatBorder:WinBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
         },

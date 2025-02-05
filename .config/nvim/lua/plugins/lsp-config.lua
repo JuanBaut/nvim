@@ -54,10 +54,9 @@ return {
       },
 
       -- html, json, css
-      emmet_ls = {},
-      html = {},
+      emmet_language_server = {},
       jsonls = {},
-      --cssmodules_ls = {},
+      html = {},
       tailwindcss = {},
       eslint = {},
       biome = {},
