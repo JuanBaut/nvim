@@ -32,6 +32,15 @@ return {
       sources = {
         default = { "lsp", "snippets", "path", "buffer" },
         providers = {
+          path = {
+            name = "PATH",
+          },
+          cmdline = {
+            name = "CMD",
+          },
+          buffer = {
+            name = "BUF",
+          },
           lsp = {
             transform_items = function(_, items)
               local col, before_cursor = get_cursor_context()
@@ -54,8 +63,9 @@ return {
               end, items)
             end,
           },
+
           snippets = {
-            name = "snippets",
+            name = "SNP",
             enabled = true,
             max_items = 20,
             min_keyword_length = 1,
