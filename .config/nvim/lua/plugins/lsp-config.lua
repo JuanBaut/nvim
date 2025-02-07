@@ -17,6 +17,7 @@ return {
         end
 
         map("<leader>rn", vim.lsp.buf.rename, "Smart rename")
+        map("gd", "<cmd>lua vim.lsp.buf.definition()<CR>", "Go to Definition")
 
         -- Diagnostics
         map("<leader>d", vim.diagnostic.open_float, "Show line diagnostics")
@@ -53,13 +54,14 @@ return {
         },
       },
 
-      -- html, json, css
-      emmet_language_server = {},
-      jsonls = {},
-      html = {},
-      tailwindcss = {},
-      eslint = {},
+      -- js tooling
       biome = {},
+      eslint = {},
+      tailwindcss = {},
+
+      -- html, json, css
+      html = {},
+      jsonls = {},
       cssls = {
         settings = {
           css = {
@@ -82,6 +84,9 @@ return {
           },
         },
       },
+
+      -- bash
+      bashls = {},
 
       -- lua
       lua_ls = {

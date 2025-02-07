@@ -1,36 +1,51 @@
--- dagger's neovim keymaps
+local map = vim.keymap.set
+local del = vim.keymap.del
+
 vim.g.mapleader = " "
 
+-- repeat last macro
+map("n", "Q", "@@", { silent = true })
+
+-- quit all buffers
+map("n", "<Leader>q", "<Cmd>qall<CR>", { silent = true })
+
 -- quickfix navigation
-vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next quickfix item" })
-vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Prev quickfix item" })
+map("n", "]q", "<cmd>cnext<CR>", { desc = "Next quickfix item" })
+map("n", "[q", "<cmd>cprev<CR>", { desc = "Prev quickfix item" })
 
 -- better end and start of the line
-vim.keymap.set({ "n", "v" }, "L", "$", { desc = "End of the line" })
-vim.keymap.set({ "n", "v" }, "H", "^", { desc = "Start of the line" })
+map({ "n", "v" }, "L", "$", { desc = "End of the line" })
+map({ "n", "v" }, "H", "^", { desc = "Start of the line" })
+
+-- replacing C-i because it mimics Tab
+map("n", "<C-t>", "<C-i>")
 
 -- move with J and K with indents
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "" })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "" })
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "" })
 
--- unbinds
-vim.keymap.set({ "c", "i", "t" }, "<c-j>", "<nop>")
-vim.keymap.set({ "c", "i", "t" }, "<c-k>", "<nop>")
-vim.keymap.set({ "n", "v", "i" }, "<c-l>", "<nop>")
-vim.keymap.set({ "n", "v" }, "Q", "<nop>")
+-- diagnostic window unbinds
+del("n", "<C-w>d")
+del("n", "<C-w><C-d>")
+map("n", "<C-w>", "<nop>")
+
+-- terminal 'unbinds'
+map({ "c", "i", "t" }, "<c-j>", "<nop>")
+map({ "c", "i", "t" }, "<c-k>", "<nop>")
+map({ "n", "v", "i" }, "<c-l>", "<nop>")
 
 -- keep cursor centered
-vim.keymap.set("n", "J", "mzJ`z", { desc = "Move current line up" })
-vim.keymap.set("n", "n", "nzzzv", { desc = "Next result in search /" })
-vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous result in search /" })
+map("n", "J", "mzJ`z", { desc = "Move current line up" })
+map("n", "n", "nzzzv", { desc = "Next result in search /" })
+map("n", "N", "Nzzzv", { desc = "Previous result in search /" })
 
 -- next greatest remap ever : asbjornHaland (yanking and pasting)
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
-vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]], { desc = "Paste from system clipboard" })
-vim.keymap.set("v", "<leader>d", [["_d]], { desc = "Delete without yanking" })
+map({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
+map({ "n", "v" }, "<leader>p", [["+p]], { desc = "Paste from system clipboard" })
+map("v", "<leader>d", [["_d]], { desc = "Delete without yanking" })
 
 -- replace current word
-vim.keymap.set(
+map(
   "n",
   "<leader>rp",
   [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
@@ -38,15 +53,14 @@ vim.keymap.set(
 )
 
 -- window management
-vim.keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })
-vim.keymap.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" })
-vim.keymap.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
-vim.keymap.set("n", "<leader>wx", "<cmd>close<CR>", { desc = "Close current split" })
-vim.keymap.set("n", "<C-w>w", "<nop>")
+map("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })
+map("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" })
+map("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
+map("n", "<leader>wx", "<cmd>close<CR>", { desc = "Close current split" })
 
 -- tab management
-vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
-vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
-vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+map("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+map("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+map("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+map("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+map("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
