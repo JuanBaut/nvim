@@ -75,6 +75,8 @@ return {
         bind_to_cwd = true, -- true creates a 2-way binding between vim's cwd and neo-tree's root
         window = {
           mappings = {
+            ["<C-v>"] = "open_vsplit",
+            ["<C-h>"] = "open_split",
             ["n"] = "toggle_node",
             ["<space>"] = "none",
           },
