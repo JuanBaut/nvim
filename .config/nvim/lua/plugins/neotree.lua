@@ -2,7 +2,7 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   -- enabled = false,
   --branch = "v3.x",
-  event = "VeryLazy",
+  -- event = "VeryLazy",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
@@ -76,7 +76,6 @@ return {
         window = {
           mappings = {
             ["<C-v>"] = "open_vsplit",
-            ["<C-h>"] = "open_split",
             ["n"] = "toggle_node",
             ["<space>"] = "none",
           },
