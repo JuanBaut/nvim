@@ -13,6 +13,7 @@ return {
   config = function()
     require("mini.icons").setup({
       file = {
+        [".envrc"] = { glyph = "", hl = "MiniIconsBlue" },
         ["LICENSE"] = { glyph = "󰿃" },
       },
       filetype = {
